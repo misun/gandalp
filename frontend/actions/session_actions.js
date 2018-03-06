@@ -10,7 +10,7 @@ export const signup = (newUser) => {
   return {
     type: RECEIVE_NEW_USER,
     newUser
-  }
+  };
 };
 
 export const login = (currentUser) => {

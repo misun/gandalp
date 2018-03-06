@@ -9,8 +9,10 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
     "webpack": "^3.11.0"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
@@ -21,12 +23,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:watch" : "webpack --watch",
-    "postinstall" : "webpack"
+    "build:watch": "webpack --watch",
+    "postinstall": "webpack"
   },
   "engines": {
-    "node" : "6.7.0",
-    "npm" : "3.10.7"
+    "node": "6.7.0",
+    "npm": "3.10.7"
   },
   "repository": {
     "type": "git",
