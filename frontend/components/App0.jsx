@@ -9,17 +9,25 @@ import { AuthRoute } from '../util/route_util';
 const App = () => (
   <div>
 
-
-
     <Header />
 
-    <Switch>
-      <AuthRoute exact path='/login' component={ LoginFormContainer } />
+    <main className="content">
+      <secton className="content-sidebar">
+        sidebar
+      </secton>
 
-      <AuthRoute exact path='/signup' component={ SignupFormContainer } >
+      <section className="content-main">
+        main
+      </section>
 
-      </AuthRoute>
-    </Switch>
+      <Switch>
+        <AuthRoute exact path='/login' component={ LoginFormContainer } />
+
+        <AuthRoute exact path='/signup' component={ SignupFormContainer } >
+
+        </AuthRoute>
+      </Switch>
+    </main>
 
 
 

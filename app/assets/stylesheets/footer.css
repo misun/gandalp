@@ -6,10 +6,10 @@
   background: #fff;
   color: #aaa;
   font-size: 14px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-top: 0;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  /* border-bottom-left-radius: 5px; */
+  /* border-bottom-right-radius: 5px; */
 }
 
 .footer-copy {
