@@ -10,7 +10,7 @@ class Api::UsersController < ApplicationController
       render json:{ errors: @user.errors.full_messages, status: 403 }
     end
   end
-
+  
   def show
     @user = User.find(params[:id])
     render :show

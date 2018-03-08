@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  owner_id: 1
+  name: MyString
+  price_range: MyString
+  category: MyString
+  address: MyString
+  phone: MyString
+  monday: MyString
+  tuesday: MyString
+  wednesday: MyString
+  thursday: MyString
+  friday: MyString
+  saturday: MyString
+  sunday: MyString
+
+two:
+  owner_id: 1
+  name: MyString
+  price_range: MyString
+  category: MyString
+  address: MyString
+  phone: MyString
+  monday: MyString
+  tuesday: MyString
+  wednesday: MyString
+  thursday: MyString
+  friday: MyString
+  saturday: MyString
+  sunday: MyString

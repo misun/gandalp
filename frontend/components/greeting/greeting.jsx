@@ -28,7 +28,7 @@ class Greeting extends React.Component {
             <Link to={'/login'}>Log In</Link>
           </li>
           <li>
-            <Link to={'/signUp'}>Sign Up</Link>
+            <Link to={'/signup'}>Sign Up</Link>
           </li>
         </ul>
       );

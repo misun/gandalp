@@ -1,24 +1,37 @@
 import React from 'react';
 import { AuthRoute } from '../../util/route_util';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container';
 import HeaderBar from './header_bar';
 
-const Header = () => (
-  <header className="header bg-img">
-      <nav className="header-nav">
-        <ul className="header-list">
-          <li><a href="#">Write a review</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Talk</a></li>
-        </ul>
-        <a href="#">Home</a>
-         <GreetingContainer />
-      </nav>
+class Header extends React.Component {
 
-      <AuthRoute exact path='/' component={ HeaderBar } />
+  render(){
+    let headerClasses;
+    if (this.props.location.pathname === '/login' ||
+      this.props.location.pathname === '/signup') {
+        headerClasses = "header";
+    } else {
+      headerClasses = "header bg-img";
+    }
 
-  </header>
-);
+    return(
+      <header className={ headerClasses }>
+          <nav className="header-nav">
+            <ul className="header-list">
+              <li><a href="#">Write a review</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Talk</a></li>
+            </ul>
+            <a href="#">TEST HOME</a>
+             <GreetingContainer />
+          </nav>
 
-export default Header;
+          <AuthRoute exact path='/' component={ HeaderBar } />
+
+      </header>
+    );
+  }
+}
+
+export default withRouter(Header);
