@@ -12,13 +12,15 @@ const App = () => (
     <Header />
 
     <main className="content">
-      <section className="content-main">
-        <Switch>
-          <AuthRoute exact path='/login' component={ LoginFormContainer } />
-
-          <AuthRoute exact path='/signup' component={ SignupFormContainer } />
-        </Switch>
+      <section className="content-sidebar">
       </section>
+      <section className="content-sidebar">
+      </section>
+      <Switch>
+        <AuthRoute exact path='/login' component={ LoginFormContainer } />
+
+        <AuthRoute exact path='/signup' component={ SignupFormContainer } />
+      </Switch>
     </main>
 
     <footer className="footer">
