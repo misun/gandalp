@@ -27,7 +27,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'jquery-rails'
