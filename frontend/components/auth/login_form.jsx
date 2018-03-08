@@ -28,22 +28,40 @@ class LoginForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input
-            type='text'
-            onChange={this.updateInput('username')}
-            value={this.state.username}
-            placeholder='Email'
-            /><br/>
-          <input
-            type='text'
-            onChange={this.updateInput('password')}
-            value={this.state.password}
-            placeholder='Password'
-            /><br/>
-          <input
-            type='submit'
-            value={this.props.formType} /><br/>
-          <h4>New to Selp? <Link to='/signup'>Sign up</Link></h4>
+          <fieldset className="form-fieldset">
+
+            <div className="input">
+              <input
+                type='text'
+                required='required'
+                onChange={this.updateInput('username')}
+                value={this.state.username}
+                placeholder='Email' />
+            </div>
+
+            <div className="input">
+              <input
+                type='text'
+                required='required'
+                onChange={this.updateInput('password')}
+                value={this.state.password}
+                placeholder='Password' />
+            </div>
+
+            <div className='submit'>
+              <button
+                type='submit'
+                value={this.props.formType} >Log In
+              </button>
+            </div>
+
+            <div className='sub-text-box'>
+              <small className='subtle-text'>New to Selp?
+                <Link className='login-link' to='/signup'>Sign up</Link>
+              </small>
+            </div>
+
+          </fieldset>
 
         </form>
       </div>

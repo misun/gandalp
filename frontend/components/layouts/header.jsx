@@ -12,7 +12,7 @@ const Header = () => (
           <li><a href="#">Events</a></li>
           <li><a href="#">Talk</a></li>
         </ul>
-
+        <a href="#">Home</a>
          <GreetingContainer />
       </nav>
 
