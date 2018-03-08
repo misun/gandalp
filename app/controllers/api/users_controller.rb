@@ -3,7 +3,7 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params);
 
     if @user.save
-      login(user)
+      login(@user)
       # render :show
       render json: { id: @user.id, username: @user.username}
     else

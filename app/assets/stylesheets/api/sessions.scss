@@ -1,3 +1,27 @@
 // Place all the styles related to the API::Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.signup-btn{
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  border-color: #8d0005;
+  background-color: #d90007;
+  background: linear-gradient(#d90007, #c91400);
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  border: 1px solid;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+  overflow: visible;
+}
+
+.inline-layout{
+  display: block;
+  font-size: 0;
+  line-height: 1;
+  text-align: left;
+}
