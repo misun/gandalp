@@ -1,37 +1,25 @@
 import React from 'react';
+import LoginForm from './login_form';
+import SignupForm from './signup_form';
 
-// class SessionForm extends React.Component {
-//   constructor(props){
-//     super(props);
-//     this.state = {
-//       username: '',
-//       password: ''
-//     };
-//
-//     this.handleSubmit = this.handleSubmit.bind(this);
-//   }
-//
-//  handleSubmit(e){
-//    e.preventDefault();
-//    const user = Object.assign({}, this.state);
-//    this.props.processForm(user);
-//  }
-//
-//   render(){
-//     return (
-//       <div>
-//         <form onSubmit={this.handleSubmit}>
-//         <input type='text' value={this.state.usernmae}/>
-//         <input type='text' value={this.state.password}/>
-//         <input type='submit' value={this.props.formType} />
-//         </form>
-//       </div>
-//     );
-//   }
-// }
+const SessionForm = ( {errors, formType, processForm } ) => {
+  const form = (
+    formType === 'signup' ?
+    <SignupForm
+      errors={ errors }
+      formType={ formType }
+      processForm={ processForm } /> :
+    <LoginForm
+      errors={ errors }
+      formType={ formType }
+      processForm={ processForm } />
+  );
 
-const SessionForm = ( props ) => (
-  <div>
-  </div>
-);
+  return (
+    <div className='session-form'>
+      { form }
+    </div>
+  );
+
+};
 export default SessionForm;

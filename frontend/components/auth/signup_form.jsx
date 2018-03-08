@@ -28,7 +28,7 @@ class SignupForm extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className='signup-form'>
         <form onSubmit={this.handleSubmit}>
         <ul className='inline-layout'>
           <li>

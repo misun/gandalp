@@ -13,3 +13,139 @@
  *= require_tree .
  *= require_self
  */
+
+ /* PHASE 0: Reset */
+
+ html, body, header, nav, h1, a,
+ ul, li, strong, main, button, i,
+ section, img, div, h2, p, form,
+ fieldset, label, input, textarea,
+ span, article, footer, time, small {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   font: inherit;
+   color: inherit;
+   text-align: inherit;
+   text-decoration: inherit;
+   vertical-align: inherit;
+   box-sizing: inherit;
+   background: transparent;
+ }
+
+ ul {
+   list-style: none;
+ }
+
+ img {
+   display: block;
+   width: 100%;
+   height: auto;
+ }
+
+ input[type="password"],
+ input[type="email"],
+ input[type="text"],
+ input[type="submit"],
+ textarea,
+ button {
+   /*
+   Get rid of native styling. Read more here:
+   http://css-tricks.com/almanac/properties/a/appearance/
+   */
+   -webkit-appearance: none;
+   -moz-appearance: none;
+ }
+
+ button,
+ input[type="submit"] {
+   cursor: pointer;
+ }
+
+ /* PHASE 1: Header */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background: #eee;
+}
+
+.header {
+  background: #fff;
+  color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.header a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 900px;
+}
+
+.header-bar {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  text-align: center;
+  margin: 0 auto;
+  height: 500px;
+}
+
+.header-logo {
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  padding-top: 10%;
+}
+
+.header-logo:hover {
+}
+
+.header-list {
+  display: flex;
+}
+
+.header-list > li {
+  /* border-left: 1px solid #ccc; */
+}
+
+.header-list > li:hover {
+  background: #000;
+}
+
+.bg-img{
+  background-image: url(/assets/laduree1.jpg);
+  background-size: cover;
+}
+
+/* PHASE 3: Layout */
+.content {
+  flex-wrap: wrap;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+
+.content-topbar {
+  /* background-image: url(/assets/laduree1.jpg);
+  background-size: cover; */
+  background-color: blue; /* test */
+  min-height: 200px;
+  padding: 20px;
+  padding-right: 19px;
+  border-right: 1px solid #ccc;
+}
+
+.content-main {
+  background-color: #fff; /* test */
+  min-height: 200px;
+  padding: 20px;
+}

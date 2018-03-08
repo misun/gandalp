@@ -9,24 +9,36 @@ class Greeting extends React.Component {
   }
 
   render(){
-    if (this.props.currentUser){
-        return (
-          <div>
-            <h1> welcome {this.props.currentUser.username}
-            </h1>
-            <button onClick={this.handleLogout.bind(this)}>Log Out</button>
-            <br/>
-          </div>
-        );
-      } else {
-        return (
-          <div>
-            <Link to={'/signUp'}>Sign Up</Link>&nbsp;&nbsp;
+    const user  = this.props.currentUser;
+    let greet;
 
+    if ( user ){
+      greet = (
+        <div>
+          <h1> welcome {this.props.currentUser.username}
+          </h1>
+          <button onClick={this.handleLogout.bind(this)}>Log Out</button>
+          <br/>
+        </div>
+      );
+    }else {
+      greet = (
+        <ul className="header-list">
+          <li>
             <Link to={'/login'}>Log In</Link>
-          </div>
-        );
-      }
+          </li>
+          <li>
+            <Link to={'/signUp'}>Sign Up</Link>
+          </li>
+        </ul>
+      );
+    }
+
+    return (
+      <div>
+        { greet }
+      </div>
+    );
   }
 };
 
