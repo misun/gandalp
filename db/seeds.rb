@@ -5,7 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all();
 
+User.create!( username: 'misun', f_name: 'misun', l_name: 'son', zip_code: '07643', password: 'starwars');
 Business.destroy_all();
 
 Business.create!([
@@ -22,7 +24,7 @@ Business.create!([
     friday: "11:00 - 20:00",
     saturday: "11:00 - 20:00",
     sunday: "11:00 - 20:00",
-    owner_id: 6,
+    owner_id: 1,
   },
   {
     name: 'Fluem Pasta',
@@ -37,6 +39,6 @@ Business.create!([
     friday: "11:00 - 23:00",
     saturday: "11:00 - 24:00",
     sunday: "11:00 - 20:00",
-    owner_id: 6,
+    owner_id: 1,
      }
   ]);
