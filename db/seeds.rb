@@ -24,7 +24,7 @@ Business.create!([
     friday: "11:00 - 20:00",
     saturday: "11:00 - 20:00",
     sunday: "11:00 - 20:00",
-    owner_id: 1,
+    owner_id: 1
   },
   {
     name: 'Fluem Pasta',
@@ -39,6 +39,6 @@ Business.create!([
     friday: "11:00 - 23:00",
     saturday: "11:00 - 24:00",
     sunday: "11:00 - 20:00",
-    owner_id: 1,
+    owner_id: 1
      }
   ]);

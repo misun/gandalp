@@ -21,21 +21,18 @@ const App = () => {
       </Switch>
 
 
-
       <footer className="footer">
+        <small className="footer-copy">
+          &copy; 2018 Selp. All rights reserved.
+        </small>
 
-      <small className="footer-copy">
-        &copy; 2018 Selp. All rights reserved.
-      </small>
-
-      <ul className="footer-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Privacy</a></li>
-      </ul>
-
-    </footer>
+        <ul className="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </footer>
 
     </div>
 )};

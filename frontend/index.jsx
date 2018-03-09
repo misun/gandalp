@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
-import * as APIUtil from './util/session_api_util';
+import * as APIUtil from './util/biz_api_util';
 
 document.addEventListener('DOMContentLoaded', ()=>{
   const root = document.getElementById('root');
@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
   }else{
     store = configureStore();
   }
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  window.api = APIUtil;
 
   ReactDOM.render(<Root store={ store }/>, root);
 });

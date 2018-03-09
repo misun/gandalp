@@ -7,13 +7,18 @@ class Api::UsersController < ApplicationController
 
       render :show
     else
-      render json:{ errors: @user.errors.full_messages, status: 403 }
+      render json:{ errors: @user.errors.full_messages }, status: 422
     end
   end
-  
+
   def show
     @user = User.find(params[:id])
-    render :show
+
+    if @user
+      render :show
+    else
+      render json:{ errors: ['no user found'] }, status: 404
+    end
   end
 
   def update
