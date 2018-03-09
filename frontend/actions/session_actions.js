@@ -23,11 +23,15 @@ export const receiveErrors = (errors) => ({
 });
 
 export const createUser = user => dispatch =>{
-  return APIUtil.signup(user).then( u => dispatch(login(u)));
+  return APIUtil.signup(user).then( u => dispatch(login(u))), err => (
+    dispatch(receiveErrors(err.responseJSON))
+  );
 };
 
 export const loginUser = user => dispatch => {
-  return APIUtil.login(user).then( u => dispatch(login(u)));
+  return APIUtil.login(user).then( u => dispatch(login(u))), err => (
+    dispatch(receiveErrors(err.responseJSON))
+  );
 };
 
 export const logoutUser = () => dispatch => {
