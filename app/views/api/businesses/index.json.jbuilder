@@ -1,1 +1,1 @@
-json.business @businesses
+json.array! @businesses

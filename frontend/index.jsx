@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
-import * as APIUtil from './util/biz_api_util';
+import { createBiz, updateBiz, deleteBiz, fetchBiz, fetchAllBiz} from './actions/business_actions';
 
 document.addEventListener('DOMContentLoaded', ()=>{
   const root = document.getElementById('root');
@@ -18,7 +18,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
   }
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.api = APIUtil;
+  window.createBiz = createBiz;
+  window.updateBiz = updateBiz;
+  window.deleteBiz = deleteBiz;
+  window.fetchBiz = fetchBiz;
+  window.fetchAllBiz = fetchAllBiz;
 
   ReactDOM.render(<Root store={ store }/>, root);
 });

@@ -20,7 +20,7 @@ export const removeBiz = businessId => ({
 });
 
 export const createBiz = business => dispatch => (
-  BizAPIUtil.makeNewBiz(business).then( biz => dispatch(receiveBiz(biz)))
+  BizAPIUtil.createBiz(business).then( biz => dispatch(receiveBiz(biz)))
 );
 
 export const updateBiz = business => dispatch => (

@@ -1,10 +1,11 @@
 import React from 'react';
-// import GreetingContainer from './greeting/greeting_container';
+import { Route, Switch } from 'react-router-dom';
+import { AuthRoute } from '../util/route_util';
 import LoginFormContainer from './auth/login_form_container';
 import SignupFormContainer from './auth/signup_form_container';
 import Header from './layouts/header';
-import { Route, Switch } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import BusinessIndexContainer from './businesses/business_index_container';
+
 
 const App = () => {
   return (
@@ -15,9 +16,10 @@ const App = () => {
       <Switch>
         <AuthRoute exact path='/login' component={ LoginFormContainer } />
 
-        <AuthRoute exact path='/signup' component={ SignupFormContainer } >
+        <AuthRoute exact path='/signup' component={ SignupFormContainer } />
 
-        </AuthRoute>
+        <AuthRoute path='/' component={BusinessIndexContainer} />
+
       </Switch>
 
 
@@ -35,6 +37,7 @@ const App = () => {
       </footer>
 
     </div>
-)};
+  );
+};
 
 export default App;

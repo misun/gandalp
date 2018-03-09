@@ -1,5 +1,5 @@
 
-export const makeNewBiz = ( business ) =>{
+export const createBiz = ( business ) =>{
   return $.ajax({
     url: '/api/businesses',
     method: 'POST',

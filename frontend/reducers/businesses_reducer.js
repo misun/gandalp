@@ -4,7 +4,7 @@ import merge from 'lodash/merge';
 const businessesReducer = ( oldState = {}, action ) => {
   Object.freeze(oldState);
 
-  switch (action.tye) {
+  switch (action.type) {
     case RECEIVE_NEW_BIZ:
       return merge({}, oldState, { [action.business.id]: action.business});
     case RECEIVE_ALL_BIZ:
