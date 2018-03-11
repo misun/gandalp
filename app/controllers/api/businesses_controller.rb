@@ -58,7 +58,7 @@ class Api::BusinessesController < ApplicationController
     # end
 
    if business
-     business.destroy();
+     business.destroy()
      render json: {}
    else
      render json: { errors: ['no business found']}, status: 404

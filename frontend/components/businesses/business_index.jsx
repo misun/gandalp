@@ -3,7 +3,6 @@ import BusinessItem from './business_item';
 
 class BusinessIndex extends React.Component{
   componentDidMount(){
-    debugger
     this.props.fetchAllBiz();
   }
 
