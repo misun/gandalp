@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
-import {createUserPhoto, updateUserPhoto, fetchAllUserPhotos , fetchUserPhoto, deleteUserPhoto } from './util/photo_api_util';
+import {fetchBizAllPhotos, fetchUserAllPhotos} from './actions/photo_actions';
 
 document.addEventListener('DOMContentLoaded', ()=>{
   const root = document.getElementById('root');
@@ -19,11 +19,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 
-  window.createUserPhoto = createUserPhoto;
-  window.updateUserPhoto = updateUserPhoto;
-  window.fetchAllUserPhotos = fetchAllUserPhotos;
-  window.fetchUserPhoto = fetchUserPhoto;
-  window.deleteUserPhoto = deleteUserPhoto;
+  window.fetchBizAllPhotos = fetchBizAllPhotos;
+  window.fetchUserAllPhotos = fetchUserAllPhotos;
+
 
   ReactDOM.render(<Root store={ store }/>, root);
 });

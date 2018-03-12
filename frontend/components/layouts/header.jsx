@@ -23,7 +23,6 @@ class Header extends React.Component {
               <li><a href="#">Events</a></li>
               <li><a href="#">Talk</a></li>
             </ul>
-            <a href="#">TEST HOME</a>
              <GreetingContainer />
           </nav>
 

@@ -1,4 +1,5 @@
 import * as BizAPIUtil from '../util/biz_api_util';
+import * as PhotoAPIUtil from '../util/photo_api_util';
 
 export const RECEIVE_NEW_BIZ = "RECEIVE_NEW_BIZ";
 export const RECEIVE_ALL_BIZ = "RECEIVE_ALL_BIZ";

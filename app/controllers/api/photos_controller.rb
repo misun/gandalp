@@ -22,7 +22,7 @@ class Api::PhotosController < ApplicationController
   end
 
   def index
-
+    # debugger
     if params[:business_id]
       @photos = Business.find(params[:business_id]).photos
     elsif params[:user_id]
