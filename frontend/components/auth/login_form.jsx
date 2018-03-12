@@ -52,7 +52,7 @@ class LoginForm extends React.Component {
 
                 <div className="input">
                   <input
-                    type='text'
+                    type='password'
                     required='required'
                     onChange={this.updateInput('password')}
                     value={this.state.password}
