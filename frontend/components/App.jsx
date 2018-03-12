@@ -5,6 +5,7 @@ import LoginFormContainer from './auth/login_form_container';
 import SignupFormContainer from './auth/signup_form_container';
 import Main from './layouts/main';
 import BusinessIndexContainer from './businesses/business_index_container';
+import BusinessItemDetailContainer from './businesses/business_item_detail_container.js';
 
 
 const App = () => {
@@ -14,18 +15,34 @@ const App = () => {
       <Route path='/' component={ Main } />
 
       <Switch>
-        <AuthRoute exact path='/login' component={ LoginFormContainer } />
+        <AuthRoute
+          exact
+          path='/login'
+          component={ LoginFormContainer } />
 
-        <AuthRoute exact path='/signup' component={ SignupFormContainer } />
+        <AuthRoute
+          exact
+          path='/signup'
+          component={ SignupFormContainer } />
 
-        <AuthRoute path='/' component={BusinessIndexContainer} />
+        <AuthRoute
+          path='/business/:businessId'
+          component={BusinessItemDetailContainer} />
+
+        <AuthRoute
+          path='/business'
+          component={BusinessIndexContainer} />
+
+        <AuthRoute
+          path='/'
+          component={BusinessIndexContainer} />
 
       </Switch>
 
 
       <footer className="footer">
         <small className="footer-copy">
-          &copy; 2018 Selp. All rights reserved.
+          &copy; 2018 Gandalp. All rights reserved.
         </small>
 
         <ul className="footer-links">

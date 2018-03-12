@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class BusinessItem extends React.Component{
 
@@ -12,8 +13,9 @@ class BusinessItem extends React.Component{
   render(){
     return (
       <ul>
-        <li>
-          <img className="biz-img" src={ this.props.business.photos } /></li>
+        <li><Link to={`/business/${this.props.business.id}`}>
+          <img className="biz-img" src={ this.props.business.photos } />
+        </Link></li>
         <li>{ this.props.business.name }</li>
         <li>{ this.props.business.price_range }</li>
         <li>{ this.props.business.category }</li>

@@ -21,3 +21,14 @@
   object-fit: cover;
   object-position: 50% 50%;
 }
+
+.biz-index h3{
+  word-wrap: break-word!important;
+  word-break: break-word!important;
+  overflow-wrap: break-word!important;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 16px;
+  line-height: 1.3125em;
+  color: #d32323;
+}

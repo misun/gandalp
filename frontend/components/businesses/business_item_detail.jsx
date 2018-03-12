@@ -1,18 +1,18 @@
 import React from 'react';
 
-class BusinessItemDetail {
+class BusinessItemDetail extends React.Component{
 
   constructor(props){
     super(props);
-
   }
   componentDidMount(){
-    
+
   }
 
   render(){
     return (
       <ul>
+        <h1> BUSINESS ITEM DETAIL </h1>
         <li>{ this.props.business.name }</li>
         <li>{ this.props.business.price_range }</li>
         <li>{ this.props.business.category }</li>
@@ -31,4 +31,4 @@ class BusinessItemDetail {
 
 }
 
-export default BusinessItem;
+export default BusinessItemDetail;

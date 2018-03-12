@@ -6,7 +6,7 @@ const MainBar = () => (
   <div className="main-bar">
     <div className="main-bar-inner">
       <div className="main-logo">
-        <a href="#">Selp</a>
+        <a href="#">Gandalp</a>
       </div>
 
       <div className="search-wrap">
