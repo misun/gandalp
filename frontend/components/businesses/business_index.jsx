@@ -8,12 +8,14 @@ class BusinessIndex extends React.Component{
 
   render(){
     const businesses = this.props.businesses.map( biz => (
-      <BusinessItemContainer key={biz.id} business={ biz } />
+      <div className="biz-item"><BusinessItemContainer key={biz.id} business={ biz } /></div>
     ));
     return (
-      <div>
+      <section className="biz-index">
+        <div className="biz-index">
         { businesses }
-      </div>
+        </div>
+      </section>
     );
   }
 }

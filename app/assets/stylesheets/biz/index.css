@@ -1,0 +1,23 @@
+.biz-item{
+  width: 298px;
+  height: 321px;
+  background-color: white;
+  border-radius: 4px;
+  margin: 20px 0 20px 0;
+  border: 1px solid #e6e6e6;
+}
+
+.biz-index{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #ffffff
+}
+
+.biz-item img{
+  width: 298px;
+  height: 180px;
+  border-radius: 4px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
