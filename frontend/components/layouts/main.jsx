@@ -2,9 +2,9 @@ import React from 'react';
 import { AuthRoute } from '../../util/route_util';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container';
-import HeaderBar from './header_bar';
+import MainBar from './main_bar';
 
-class Header extends React.Component {
+class Main extends React.Component {
 
   render(){
     let headerClasses;
@@ -26,11 +26,11 @@ class Header extends React.Component {
              <GreetingContainer />
           </nav>
 
-          <AuthRoute exact path='/' component={ HeaderBar } />
+          <AuthRoute exact path='/' component={ MainBar } />
 
       </header>
     );
   }
 }
 
-export default withRouter(Header);
+export default withRouter(Main);
