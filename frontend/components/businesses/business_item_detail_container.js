@@ -9,7 +9,6 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
   return {
-    fetchBiz: ( bizId ) => dispatch( fetchBiz(bizId) ),
     fetchBizAllPhotos: ( bizId ) => dispatch( fetchBizAllPhotos( bizId ))
   };
 };
