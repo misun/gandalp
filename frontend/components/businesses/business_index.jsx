@@ -9,7 +9,9 @@ class BusinessIndex extends React.Component{
 
   render(){
     const businesses = this.props.businesses.map( biz => (
-      <div className="biz-item"><BusinessItemContainer key={biz.id} business={ biz } /></div>
+      <div className="biz-item" key={biz.id}>
+        <BusinessItemContainer business={ biz } />
+      </div>
     ));
     return (
       <section className="biz-index">

@@ -8,6 +8,14 @@ class Greeting extends React.Component {
     this.props.logout();
   }
 
+  loginGuest(e){
+    e.preventDefault();
+    this.props.login({
+      username: 'guest',
+      password: 'starwars'
+    });
+  }
+
   render(){
     const user  = this.props.currentUser;
     let greet;
@@ -17,13 +25,16 @@ class Greeting extends React.Component {
         <div>
           <h1> welcome {this.props.currentUser.username}
           </h1>
-          <button onClick={this.handleLogout.bind(this)}>Log Out</button>
+          <button  onClick={this.handleLogout.bind(this)}>Log Out</button>
           <br/>
         </div>
       );
     }else {
       greet = (
         <ul className="header-list">
+          <li>
+            <a href='#' onClick={this.loginGuest.bind(this)}>Guest</a>
+          </li>
           <li>
             <Link to={'/login'}>Log In</Link>
           </li>

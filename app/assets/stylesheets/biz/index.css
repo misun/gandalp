@@ -32,3 +32,9 @@
   line-height: 1.3125em;
   color: #d32323;
 }
+
+.biz-item-detail{
+  display: flex;
+  flex-direction: column;
+
+}

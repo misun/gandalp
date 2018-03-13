@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all();
 
+User.create!( username: 'guest', f_name: 'guest', l_name: 'guest', zip_code:'00000', password: 'starwars');
 User.create!( username: 'misun', f_name: 'misun', l_name: 'son', zip_code: '07643', password: 'starwars');
 User.create!( username: 'misun2', f_name: 'misun2', l_name: 'son', zip_code: '12312', password: 'starwars');
 User.create!( username: 'misun3', f_name: 'misun3', l_name: 'son', zip_code: '24124', password: 'starwars');
@@ -113,10 +114,21 @@ Photo.destroy_all();
 
 Photo.create!([
   {
-    img_url: "https://s3-media3.fl.yelpcdn.com/bphoto/VAxcW7t8_8Gjzzj1dlaw9g/ls.jpg",
+    img_url: "https://s3-media3.fl.yelpcdn.com/bphoto/VAxcW7t8_8Gjzzj1dlaw9g/o.jpg",
     business_id: 1,
     user_id: 1
   },
+  {
+    img_url: "https://s3-media1.fl.yelpcdn.com/bphoto/RK78PHJ1Tj9CjTdLlSkp3Q/o.jpg",
+    business_id: 1,
+    user_id: 1
+  },
+  {
+    img_url: "https://s3-media4.fl.yelpcdn.com/bphoto/dIzOrm_9X5PxKJcpzQ8Esw/o.jpg",
+    business_id: 1,
+    user_id: 1
+  },
+
   {
     img_url: "https://s3-media2.fl.yelpcdn.com/bphoto/U90cr6FAs7CRF83TkbvrZg/ls.jpg",
     business_id: 2,

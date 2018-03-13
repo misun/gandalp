@@ -26,14 +26,17 @@ const App = () => {
           component={ SignupFormContainer } />
 
         <AuthRoute
+          exact
           path='/business/:businessId'
           component={BusinessItemDetailContainer} />
 
         <AuthRoute
+          exact
           path='/business'
           component={BusinessIndexContainer} />
 
         <AuthRoute
+          exact
           path='/'
           component={BusinessIndexContainer} />
 

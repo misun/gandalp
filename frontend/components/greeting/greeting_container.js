@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { loginUser, logoutUser } from '../../actions/session_actions';
 import Greeting from './greeting';
 
+
 const mapStateToProps = (state) => {
   return { currentUser: state.session.currentUser };
 };
