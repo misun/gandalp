@@ -13,7 +13,7 @@ User.create!(
 );
 user1 = User.create!(
   username: 'misun1', f_name: 'misun1', l_name: 'son', zip_code: '07643', password: 'starwars',
-  , image: 'https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg'
+  image: 'https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg'
 );
 user2 = User.create!(
   username: 'misun2', f_name: 'misun2', l_name: 'son', zip_code: '12312', password: 'starwars',
@@ -31,7 +31,7 @@ user5 = User.create!(
   username: 'misun5', f_name: 'misun3', l_name: 'son',
   zip_code: '12345', password: 'starwars',
   image: 'https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg');
-user6 = User.create!( 
+user6 = User.create!(
   username: 'misun6', f_name: 'misun3', l_name: 'son',
   zip_code: '56778', password: 'starwars',
   image: 'https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg');
