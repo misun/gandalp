@@ -1,0 +1,39 @@
+.biz-item{
+  width: 298px;
+  height: 321px;
+  background-color: white;
+  border-radius: 4px;
+  margin: 20px 0 20px 0;
+  border: 1px solid #e6e6e6;
+}
+
+.biz-item img{
+  width: 298px;
+  height: 180px;
+  border-radius: 4px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+
+.biz-index-item{
+  background-color: white;
+  /* margin: 20px 0 20px 0; */
+  height: 177px;
+}
+
+.biz-idx-img {
+  display: block;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.biz-item-top{
+  height: 70%;
+}
+
+.biz-item-bottom{
+  height: 30%;
+  background-color: aliceblue;
+}

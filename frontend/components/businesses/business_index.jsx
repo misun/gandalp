@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BusinessItemContainer from './business_item_container';
+import Header from '../layouts/header';
 
 class BusinessIndex extends React.Component{
   componentDidMount(){
@@ -9,18 +10,29 @@ class BusinessIndex extends React.Component{
 
   render(){
     const businesses = this.props.businesses.map( biz => (
-      <div className="biz-item" key={biz.id}>
-        <BusinessItemContainer business={ biz } />
+      <div className="biz-index-item" key={biz.id}>
+        <BusinessItemContainer business={ biz } parent={ 'biz-index'} />
       </div>
     ));
     return (
-      <section className="biz-index">
-        <h3>Hot & New Businesses </h3>
-        <div className="biz-index">
-            { businesses }
-        </div>
-        <Link to='/business'><h3>See more hot and new businesses</h3></Link>
-      </section>
+      <div className="biz-content">
+
+        <Header />
+        <section className="biz-content-top">
+        </section>
+
+        <section className="biz-content-bottom">
+          <div className="biz-bottom-main">
+            <div className="biz-leftbar">
+              { businesses }
+            </div>
+
+            <div className="biz-rightbar">
+            </div>
+
+          </div>
+        </section>
+      </div>
     );
   }
 }

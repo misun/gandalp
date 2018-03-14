@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdStar, MdStarBorder, MdStars,  MdStarOutline, MdStarHalf} from 'react-icons/lib/md';
+import { MdStar, MdStarBorder, MdStars,  MdStarOutline, MdStarHalf, MdBuild} from 'react-icons/lib/md';
 import Header from '../layouts/header';
 
 const BusinessItemDetail = ({ business }) => {
@@ -61,6 +61,7 @@ const BusinessItemDetail = ({ business }) => {
             <div className="biz-sub-content">
               <div className="map-box">
                 <h1>map box</h1>
+                <MdBuild size={60} />
               </div>
               <div className="show-case">
                 { gallery }
@@ -74,6 +75,7 @@ const BusinessItemDetail = ({ business }) => {
 
             <div className="biz-leftbar">
               reviews
+              <MdBuild size={60} />
             </div>
 
             <div className="biz-rightbar">

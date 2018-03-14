@@ -1,12 +1,12 @@
 import React from 'react';
-import BusinessIndexContainer from '../businesses/business_index_container';
+import BusinessHomeContainer from '../businesses/business_home_container';
 import MainBar from './main_bar';
 
 
 const Home = () => (
  <div>
    <MainBar />
-   <BusinessIndexContainer />
+   <BusinessHomeContainer />
  </div>
 );
 
