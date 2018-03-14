@@ -35,10 +35,10 @@ class SignupForm extends React.Component {
           <section className="content-sidebar">
             <div className='session-form'>
               <div className="session-header">
-                <h2>Log In to Selp</h2>
-                <h4>New to Selp? Sign up</h4>
+                <h2>Log In to Gandalp</h2>
+                <h4>New to Gandalp? Sign up</h4>
                 <p>
-                By logging in, you agree to Selp’s Terms of Service and Privacy Policy.
+                By logging in, you agree to Gandalp’s Terms of Service and Privacy Policy.
                 </p>
               </div>
               <hr align="center"/>
@@ -97,7 +97,7 @@ class SignupForm extends React.Component {
                   </div>
 
                   <div className='sub-text-box'>
-                    <small className='subtle-text'>Already on Selp?
+                    <small className='subtle-text'>Already on Gandalp?
                       <Link className='login-link' to='/login'>Log in</Link>
                     </small>
                   </div>

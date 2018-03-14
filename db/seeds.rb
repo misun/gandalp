@@ -128,24 +128,7 @@ businesses = Business.create!([
     saturday: "11:00 - 20:00",
     sunday: "11:00 - 20:00",
     owner_id: user6.id
-  },
-
-  {
-    name: 'Kebab Empire',
-    price_range: '11-30',
-    category: 'Kebab',
-    address: "934 8th Ave, New York, NY 10019",
-    phone: "(646) 850-9008",
-    monday: "12:00 - 20:00",
-    tuesday: "11:00 - 22:00",
-    wednesday: "13:00 - 20:00",
-    thursday: "11:00 - 20:00",
-    friday: "11:00 - 23:00",
-    saturday: "11:00 - 24:00",
-    sunday: "11:00 - 20:00",
-    owner_id: user1.id
-  },
-
+  }
 ]);
 
 Photo.destroy_all();
