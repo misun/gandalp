@@ -66,7 +66,7 @@ body {
 .logo-img{
   width: 270px;
   height: 90px;
-  background: url('/assets/gandalp_logo.png') no-repeat center;
+  background: url('<%= asset_path("gandalp_logo.png") %>') no-repeat center;
   background-size: cover;
 }
 
@@ -91,7 +91,8 @@ body {
 }
 
 .bg-img{
- background: #d32323 url('/assets/smoothie.jpeg') no-repeat center;
+ /* background: #d32323 url('/assets/smoothie.jpeg') no-repeat center; */
+ background: url('<%= asset_path("smoothie.jpeg") %>');
  background-size: cover;
 }
 .search{
