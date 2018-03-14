@@ -20,6 +20,7 @@ const businessesReducer = ( oldState = {}, action ) => {
     case RECEIVE_BIZ_ALL_PHOTOS:
       let photoState = merge({}, oldState);
 
+      // debugger
       const bizId = Object.values(action.photos)[0].business_id;
       photoState[bizId].photos = Object.values(action.photos).map(p => p.img_url);
 
