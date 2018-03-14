@@ -10,18 +10,18 @@ User.destroy_all();
 User.create!(
   username: 'guest', f_name: 'guest', l_name: 'guest', zip_code:'00000', password: 'starwars'
 );
-User.create!(
-  username: 'misun', f_name: 'misun', l_name: 'son', zip_code: '07643', password: 'starwars'
+user1 = User.create!(
+  username: 'misun', f_name: 'misun1', l_name: 'son', zip_code: '07643', password: 'starwars'
 );
-User.create!( username: 'misun2', f_name: 'misun2', l_name: 'son', zip_code: '12312', password: 'starwars');
-User.create!( username: 'misun3', f_name: 'misun3', l_name: 'son', zip_code: '24124', password: 'starwars');
-User.create!( username: 'misun4', f_name: 'misun3', l_name: 'son', zip_code: '23145', password: 'starwars');
-User.create!( username: 'misun5', f_name: 'misun3', l_name: 'son', zip_code: '12345', password: 'starwars');
-User.create!( username: 'misun6', f_name: 'misun3', l_name: 'son', zip_code: '56778', password: 'starwars');
+user2 = User.create!( username: 'misun2', f_name: 'misun2', l_name: 'son', zip_code: '12312', password: 'starwars');
+user3 = User.create!( username: 'misun3', f_name: 'misun3', l_name: 'son', zip_code: '24124', password: 'starwars');
+user4 = User.create!( username: 'misun4', f_name: 'misun3', l_name: 'son', zip_code: '23145', password: 'starwars');
+user5 = User.create!( username: 'misun5', f_name: 'misun3', l_name: 'son', zip_code: '12345', password: 'starwars');
+user6 = User.create!( username: 'misun6', f_name: 'misun3', l_name: 'son', zip_code: '56778', password: 'starwars');
 
 Business.destroy_all();
 
-Business.create!([
+businesses = Business.create!([
   {
     name: 'Kick Axe Throwing',
     price_range: '11-30',
@@ -35,7 +35,7 @@ Business.create!([
     friday: "11:00 - 20:00",
     saturday: "11:00 - 20:00",
     sunday: "11:00 - 20:00",
-    owner_id: 2
+    owner_id: user1.id
   },
   {
     name: 'Chip NYC',
@@ -50,7 +50,7 @@ Business.create!([
     friday: "11:00 - 20:00",
     saturday: "11:00 - 20:00",
     sunday: "11:00 - 20:00",
-    owner_id: 2
+    owner_id: user2.id
   },
   {
     name: 'TongKatsu',
@@ -65,7 +65,7 @@ Business.create!([
     friday: "11:00 - 23:00",
     saturday: "11:00 - 24:00",
     sunday: "11:00 - 20:00",
-    owner_id: 3
+    owner_id: user3.id
   },
   {
     name: 'Boucherie - Park Ave South',
@@ -80,7 +80,7 @@ Business.create!([
     friday: "11:00 - 23:00",
     saturday: "11:00 - 24:00",
     sunday: "11:00 - 20:00",
-    owner_id: 3
+    owner_id: user4.id
   },
   {
     name: 'Bubo',
@@ -95,7 +95,7 @@ Business.create!([
     friday: "11:00 - 20:00",
     saturday: "11:00 - 20:00",
     sunday: "11:00 - 20:00",
-    owner_id: 4
+    owner_id: user5.id
   },
   {
     name: 'Ho Foods',
@@ -110,7 +110,7 @@ Business.create!([
     friday: "11:00 - 20:00",
     saturday: "11:00 - 20:00",
     sunday: "11:00 - 20:00",
-    owner_id: 5
+    owner_id: user6.id
   },
 
   {
@@ -126,85 +126,84 @@ Business.create!([
     friday: "11:00 - 23:00",
     saturday: "11:00 - 24:00",
     sunday: "11:00 - 20:00",
-    owner_id: 6
+    owner_id: user1.id
   },
 
 ]);
 
 Photo.destroy_all();
 
-Photo.create!([
+photo = Photo.create!([
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz1-1.jpg"),
-    # File.new(Rails.root.join('path', 'to', 'somefile.jpg')),
-    business_id: 1
+    business_id: businesses[0].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz1-1.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz1-2.jpg"),
-    business_id: 1
+    business_id: businesses[0].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz1-2.jpg"
   },
   {
-    business_id: 1
+    business_id: businesses[0].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz1-3.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz2-1.jpg"),
-    business_id: 2
+    business_id: businesses[1].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz2-1.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz2-2.jpg"),
-    business_id: 2
+    business_id: businesses[1].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz2-2.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz2-3.jpg"),
-    business_id: 2
+    business_id: businesses[1].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz2-3.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz3-1.jpg"),
-    business_id: 3
+    business_id: businesses[2].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz3-1.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz3-2.jpg"),
-    business_id: 3
+    business_id: businesses[2].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz3-2.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz3-3.jpg"),
-    business_id: 3
+    business_id: businesses[2].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz3-3.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz4-1.jpg"),
-    business_id: 4
+    business_id: businesses[3].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz4-1.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz4-2.jpg"),
-    business_id: 4
+    business_id: businesses[3].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz4-2.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz4-3.jpg"),
-    business_id: 4
+    business_id: businesses[3].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz4-3.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz5-1.jpg"),
-    business_id: 5
+    business_id: businesses[4].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz5-1.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz5-2.jpg"),
-    business_id: 5
+    business_id: businesses[4].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz5-2.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz5-3.jpg"),
-    business_id: 5
+    business_id: businesses[4].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz5-3.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz6-1.jpg"),
-    business_id: 6
+    business_id: businesses[5].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz6-1.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz6-2.jpg"),
-    business_id: 6
+    business_id: businesses[5].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz6-2.jpg"
   },
   {
-    image: File.open("#{Rails.root}/app/assets/images/biz/biz6-3.jpg"),
-    business_id: 6
-  },
-
+    business_id: businesses[5].id,
+    image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/photos/images/biz6-3.jpg"
+  }
 ]);
