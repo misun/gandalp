@@ -18,6 +18,7 @@ class Greeting extends React.Component {
 
   render(){
     const user  = this.props.currentUser;
+
     let greet;
 
     if ( user ){
@@ -46,7 +47,7 @@ class Greeting extends React.Component {
     }
 
     return (
-      <div>
+      <div className="header-nav-right">
         { greet }
       </div>
     );

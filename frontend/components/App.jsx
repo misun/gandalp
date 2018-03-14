@@ -3,17 +3,13 @@ import { Route, Switch } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import LoginFormContainer from './auth/login_form_container';
 import SignupFormContainer from './auth/signup_form_container';
-import Main from './layouts/main';
 import BusinessIndexContainer from './businesses/business_index_container';
 import BusinessItemDetailContainer from './businesses/business_item_detail_container.js';
-
+import Home from './layouts/home';
 
 const App = () => {
   return (
     <div>
-
-      <Route path='/' component={ Main } />
-
       <Switch>
         <AuthRoute
           exact
@@ -34,14 +30,11 @@ const App = () => {
           exact
           path='/business'
           component={BusinessIndexContainer} />
-
-        <AuthRoute
+        <Route
           exact
           path='/'
-          component={BusinessIndexContainer} />
-
+          component={ Home} />
       </Switch>
-
 
       <footer className="footer">
         <small className="footer-copy">

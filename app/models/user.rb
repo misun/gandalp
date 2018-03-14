@@ -2,15 +2,19 @@
 #
 # Table name: users
 #
-#  id              :integer          not null, primary key
-#  username        :string           not null
-#  password_digest :string           not null
-#  session_token   :string           not null
-#  f_name          :string           not null
-#  l_name          :string           not null
-#  zip_code        :string
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
+#  id                 :integer          not null, primary key
+#  username           :string           not null
+#  password_digest    :string           not null
+#  session_token      :string           not null
+#  f_name             :string           not null
+#  l_name             :string           not null
+#  zip_code           :string
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  image_file_name    :string
+#  image_content_type :string
+#  image_file_size    :integer
+#  image_updated_at   :datetime
 #
 
 class User < ApplicationRecord
@@ -22,12 +26,13 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_attached_file :image, default_url: 'guest_profile.jpeg'
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
+
   has_many :businesses,
     primary_key: :id,
     foreign_key: :owner_id,
     class_name: :Business
-
-  has_many :photos
 
   def self.find_by_credentials(username, password)
     @user = User.find_by(username: username)

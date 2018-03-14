@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Header from '../layouts/header';
 
 class LoginForm extends React.Component {
   constructor(props){
@@ -26,6 +27,8 @@ class LoginForm extends React.Component {
 
   render(){
     return (
+      <div>
+      <Header />
       <main className="content">
         <section className="content-sidebar">
           <div className="session-form">
@@ -80,6 +83,7 @@ class LoginForm extends React.Component {
             <img className="session-img" />
         </section>
       </main>
+      </div>
     );
   }
 }

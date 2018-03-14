@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import Header from '../layouts/header';
 
 class SignupForm extends React.Component {
   constructor(props){
@@ -18,7 +19,7 @@ class SignupForm extends React.Component {
     return e => this.setState({
       [field]: e.target.value
     });
-  };
+  }
 
   handleSubmit(e){
    e.preventDefault();
@@ -28,89 +29,92 @@ class SignupForm extends React.Component {
 
   render(){
     return (
-      <main className="content">
-        <section className="content-sidebar">
-          <div className='session-form'>
-            <div className="session-header">
-              <h2>Log In to Selp</h2>
-              <h4>New to Selp? Sign up</h4>
-              <p>
-              By logging in, you agree to Selp’s Terms of Service and Privacy Policy.
-              </p>
+      <div>
+        <Header />
+        <main className="content">
+          <section className="content-sidebar">
+            <div className='session-form'>
+              <div className="session-header">
+                <h2>Log In to Selp</h2>
+                <h4>New to Selp? Sign up</h4>
+                <p>
+                By logging in, you agree to Selp’s Terms of Service and Privacy Policy.
+                </p>
+              </div>
+              <hr align="center"/>
+
+              <form onSubmit={this.handleSubmit}>
+                <fieldset className="form-fieldset">
+
+                  <div className="input">
+                    <input
+                      type='text'
+                      required='required'
+                      onChange={this.updateInput('f_name')}
+                      value={this.state.f_name}
+                      placeholder='First Name' />
+                  </div>
+
+                  <div className="input">
+                  <input
+                    type='text'
+                    required='required'
+                    onChange={this.updateInput('l_name')}
+                    value={this.state.l_name}
+                    placeholder='Last Name' />
+                  </div>
+
+                  <div className="input">
+                    <input
+                      type='text'
+                      required='required'
+                      onChange={this.updateInput('username')}
+                      value={this.state.username}
+                      placeholder='Email' />
+                  </div>
+
+                  <div className="input">
+                    <input
+                      type='password'
+                      required='required'
+                      onChange={this.updateInput('password')}
+                      value={this.state.password}
+                      placeholder='Password' />
+                  </div>
+
+                  <div className="input">
+                    <input
+                      type='text'
+                      onChange={this.updateInput('zip_code')}
+                      value={this.state.zip_code}
+                      placeholder='Zip Code'/>
+                  </div>
+                  <div className='submit'>
+                    <button
+                      type='submit'
+                      value={this.props.formType} >Sign Up
+                    </button>
+                  </div>
+
+                  <div className='sub-text-box'>
+                    <small className='subtle-text'>Already on Selp?
+                      <Link className='login-link' to='/login'>Log in</Link>
+                    </small>
+                  </div>
+
+
+                </fieldset>
+
+              </form>
             </div>
-            <hr align="center"/>
+          </section>
 
-            <form onSubmit={this.handleSubmit}>
-              <fieldset className="form-fieldset">
-
-                <div className="input">
-                  <input
-                    type='text'
-                    required='required'
-                    onChange={this.updateInput('f_name')}
-                    value={this.state.f_name}
-                    placeholder='First Name' />
-                </div>
-
-                <div className="input">
-                <input
-                  type='text'
-                  required='required'
-                  onChange={this.updateInput('l_name')}
-                  value={this.state.l_name}
-                  placeholder='Last Name' />
-                </div>
-
-                <div className="input">
-                  <input
-                    type='text'
-                    required='required'
-                    onChange={this.updateInput('username')}
-                    value={this.state.username}
-                    placeholder='Email' />
-                </div>
-
-                <div className="input">
-                  <input
-                    type='password'
-                    required='required'
-                    onChange={this.updateInput('password')}
-                    value={this.state.password}
-                    placeholder='Password' />
-                </div>
-
-                <div className="input">
-                  <input
-                    type='text'
-                    onChange={this.updateInput('zip_code')}
-                    value={this.state.zip_code}
-                    placeholder='Zip Code'/>
-                </div>
-                <div className='submit'>
-                  <button
-                    type='submit'
-                    value={this.props.formType} >Sign Up
-                  </button>
-                </div>
-
-                <div className='sub-text-box'>
-                  <small className='subtle-text'>Already on Selp?
-                    <Link className='login-link' to='/login'>Log in</Link>
-                  </small>
-                </div>
-
-
-              </fieldset>
-
-            </form>
-          </div>
-        </section>
-
-        <section className="content-main">
-            <div className="session-img">
-            </div>
-        </section>
-      </main>
+          <section className="content-main">
+              <div className="session-img">
+              </div>
+          </section>
+        </main>
+      </div>
 
     );
   }

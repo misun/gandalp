@@ -9,11 +9,23 @@ body {
  background: #eee;
 }
 
+.main-header {
+ color: #fff;
+ /* border-bottom: 1px solid #ccc; */
+ height: 64px;
+ display: flex;
+ align-items: center;
+}
+
 .header {
  background: #d32323;
  color: #fff;
- border-bottom: 1px solid #ccc;
+ /* border-bottom: 1px solid #ccc; */
+ height: 64px;
+ display: flex;
+ align-items: center;
 }
+
 
 .main-logo a {
  display: block;
@@ -24,9 +36,8 @@ body {
  display: flex;
  justify-content: space-between;
  margin: 0 auto;
- width: 900px;
+ width: 960px;
 }
-
 
 .main-bar {
  display: flex;
@@ -51,6 +62,14 @@ body {
  padding-bottom: 40px;
 }
 
+
+.logo-img{
+  width: 270px;
+  height: 90px;
+  background: url('/assets/gandalp_logo.png') no-repeat center;
+  background-size: cover;
+}
+
 .main-logo:hover {
 }
 
@@ -72,7 +91,7 @@ body {
 }
 
 .bg-img{
- background: #d32323 url('/assets/smoothie-f7aeb29a3bad8883fb253bdfbbc960f1e2f48f06292dbb83a2a527c4219a8aa8.jpg ') no-repeat center;
+ background: #d32323 url('/assets/smoothie.jpeg') no-repeat center;
  background-size: cover;
 }
 .search{
@@ -134,4 +153,10 @@ body {
   justify-content: center;
   height: 100%;
   border-radius: 0 5px 5px 0;
+}
+.header-nav-left{
+
+}
+.header-nav-right{
+
 }

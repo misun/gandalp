@@ -1,1 +1,3 @@
-json.extract! photo, :id, :img_url, :user_id, :business_id
+json.id photo.id
+json.business_id photo.business_id
+json.img_url asset_path(photo.image.url)
