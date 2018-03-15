@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MdStar, MdStarBorder, MdStars,  MdStarOutline, MdStarHalf, MdBuild} from 'react-icons/lib/md';
 
 class BusinessItem extends React.Component{
 
@@ -28,14 +29,43 @@ class BusinessItem extends React.Component{
       );
     } else{
       return (
-        <div>
+        <div className="biz-item-wrapper">
           <div className="biz-item-top">
-            <Link to={`/business/${this.props.business.id}`}>
-              <img className="biz-idx-img" src={ photo_url } />
-            </Link>
+            <div className="item-left">
+              <Link to={`/business/${this.props.business.id}`}>
+                <img className="biz-idx-img" src={ photo_url } />
+              </Link>
+            </div>
+            <div className="item-middle">
+                <h1>{ this.props.business.name }</h1>
+                <div className="review-rate-star">
+                  <MdStar color="#ed883b"/>
+                  <MdStar color="#ed883b"/>
+                  <MdStar color="#ed883b"/>
+                  <MdStar color="#ed883b"/>
+                  <MdStar color="#ed883b"/>
+                  &nbsp;&nbsp;&nbsp;
+                  <h4>212 Reviews</h4>
+                </div>
+
+                <div className="biz-header-info">
+                  <span className="price-range">$$ {this.props.business.price_range}</span>
+                    &nbsp;&nbsp;&nbsp;
+                  <span className="category">
+                    { this.props.business.category }</span>
+                </div>
+            </div>
+            <div className="item-right">
+              <div>{ this.props.business.address }</div>
+              <div>{ this.props.business.phone }</div>
+            </div>
           </div>
           <div className="biz-item-bottom">
-            bottom
+            <div className="item-left"></div>
+            <div className="item-wide-right">
+              review
+              <MdBuild size={40} />
+            </div>
           </div>
         </div>
       );

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BusinessItemContainer from './business_item_container';
 import Header from '../layouts/header';
+import { MdBuild} from 'react-icons/lib/md';
 
 class BusinessIndex extends React.Component{
   componentDidMount(){
@@ -19,6 +20,7 @@ class BusinessIndex extends React.Component{
 
         <Header />
         <section className="biz-content-top">
+          <h1><strong>Places</strong> near Civic Center, Manhattan, NY</h1>
         </section>
 
         <section className="biz-content-bottom">
@@ -28,6 +30,7 @@ class BusinessIndex extends React.Component{
             </div>
 
             <div className="biz-rightbar">
+                map box <MdBuild size={40} />
             </div>
 
           </div>
