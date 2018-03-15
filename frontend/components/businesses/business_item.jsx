@@ -13,7 +13,6 @@ class BusinessItem extends React.Component{
   render(){
     const photo_url = this.props.business.photos ? this.props.business.photos[0] : null;
 
-    debugger
     let biz_item;
     if (this.props.parent === 'biz-home'){
       return (
