@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
-import {fetchBizAllPhotos, fetchUserAllPhotos} from './actions/photo_actions';
-import {fetchBiz} from './actions/business_actions';
+import { createReview, updateReview, deleteReview } from './util/review_api_util';
 
 document.addEventListener('DOMContentLoaded', ()=>{
   const root = document.getElementById('root');
@@ -17,13 +16,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
   }else{
     store = configureStore();
   }
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
 
-  window.fetchBiz = fetchBiz;
-  window.fetchBizAllPhotos = fetchBizAllPhotos;
-  window.fetchUserAllPhotos = fetchUserAllPhotos;
-
+  //test logic
+  window.createReview = createReview;
+  window.updateReview = updateReview;
+  window.deleteReview = deleteReview;
 
   ReactDOM.render(<Root store={ store }/>, root);
 });

@@ -7,7 +7,7 @@ class Api::PhotosController < ApplicationController
     if @photo.save
       render :show
     else
-      render json: { errors: @photo.errors.full_messages }, status: 422
+      render json: { errors: @photo.errors.full_messages }, status: 403
     end
   end
 
@@ -22,7 +22,6 @@ class Api::PhotosController < ApplicationController
   end
 
   def index
-    # debugger
     if params[:business_id]
       @photos = Business.find(params[:business_id]).photos
     elsif params[:user_id]

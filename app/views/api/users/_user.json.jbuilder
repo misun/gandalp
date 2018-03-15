@@ -3,3 +3,4 @@
 json.id user.id
 json.username user.username
 json.img_url asset_path(user.image.url)
+json.reviews user.reviews

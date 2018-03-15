@@ -11,10 +11,15 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
 
     resources :businesses, only: [:create, :update, :destroy, :index, :show] do
+
       resources :photos, only: [:index]
+
+      resources :reviews, only: [:create, :update]
     end
 
     resources :photos, only: [:create, :update, :destroy, :show]
+
+    resources :reviews, only: [:destroy]
 
   end
 

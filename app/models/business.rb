@@ -30,4 +30,6 @@ class Business < ApplicationRecord
 
   has_many :photos
 
+  has_many :reviews
+
 end

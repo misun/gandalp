@@ -9,7 +9,7 @@ class Api::BusinessesController < ApplicationController
 
       render :show
     else
-      render json: { errors: @business.errors.full_messages}, status: 422
+      render json: { errors: @business.errors.full_messages}, status: 403
     end
   end
 
@@ -47,8 +47,8 @@ class Api::BusinessesController < ApplicationController
     business = Business.find(params[:id])
 
     # TODO: apply logic below
-
-    # if business.owner_id == current_user.id
+    #
+    # if business && business.owner_id == current_user.id
     #   business.destroy();
     #   render json: {}
     # elsif business && business.owner_id != current_user.id
@@ -63,6 +63,7 @@ class Api::BusinessesController < ApplicationController
    else
      render json: { errors: ['no business found']}, status: 404
    end
+
   end
 
   private

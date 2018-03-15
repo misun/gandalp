@@ -34,6 +34,8 @@ class User < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :Business
 
+  has_many :reviews
+
   def self.find_by_credentials(username, password)
     @user = User.find_by(username: username)
 
