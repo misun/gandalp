@@ -131,6 +131,197 @@ businesses = Business.create!([
   }
 ]);
 
+Review.destroy_all();
+
+reviews = Review.create!([
+  {
+    user_id: user1.id,
+    business_id: businesses[0].id,
+    rating: 1,
+    body: "We were lucky to find this gem while staying at the Hilton Millenium. It is just two short blocks away. We've never been to France but I imagine this is as close as you can get for a French breakfast/brunch spot between Wall Street and the WTC site. We enjoyed the avocado toast, the Madame croque sandwich and a plentiful fruit salad bowl. The coffee was excellent as well. Couldn't resist a serving of the homemade cookies. Glad we did. I can only guess that the other deserts on the menu are outstanding as well."
+  },
+  {
+    user_id: user2.id,
+    business_id: businesses[0].id,
+    rating: 2,
+    body: "moderate"
+  },
+  {
+    user_id: user3.id,
+    business_id: businesses[0].id,
+    rating: 3,
+    body: "moderate"
+  },
+  {
+    user_id: user4.id,
+    business_id: businesses[0].id,
+    rating: 4,
+    body: "moderate"
+  },
+  {
+    user_id: user5.id,
+    business_id: businesses[0].id,
+    rating: 5,
+    body: "moderate"
+  },
+  {
+    user_id: user1.id,
+    business_id: businesses[1].id,
+    rating: 1,
+    body: "Love the atmosphere here, really felt like I was in a small Parisian Cafe. The decor was simple but elegant. The owner was gracious and very accommodating (worked with my friend to put together a gluten-free meal that she can eat).
+
+    The food was excellent. Had the sandwich martin with extra avocado, fruit salad and chocolate croissant. Def recommend the sandwich.
+
+    Def a recommendation but keep in mind it is very very very small since it is a cafe so not ideal for big parties.
+
+    Enjoy!"
+  },
+  {
+    user_id: user2.id,
+    business_id: businesses[1].id,
+    rating: 2,
+    body: "moderate"
+  },
+  {
+    user_id: user3.id,
+    business_id: businesses[1].id,
+    rating: 3,
+    body: "moderate"
+  },
+  {
+    user_id: user4.id,
+    business_id: businesses[1].id,
+    rating: 4,
+    body: "moderate"
+  },
+  {
+    user_id: user5.id,
+    business_id: businesses[1].id,
+    rating: 5,
+    body: "moderate"
+  },
+  {
+    user_id: user1.id,
+    business_id: businesses[2].id,
+    rating: 1,
+    body: "moderate"
+  },
+  {
+    user_id: user2.id,
+    business_id: businesses[2].id,
+    rating: 2,
+    body: "moderate"
+  },
+  {
+    user_id: user3.id,
+    business_id: businesses[2].id,
+    rating: 3,
+    body: "moderate"
+  },
+  {
+    user_id: user4.id,
+    business_id: businesses[2].id,
+    rating: 4,
+    body: "moderate"
+  },
+  {
+    user_id: user5.id,
+    business_id: businesses[2].id,
+    rating: 5,
+    body: "moderate"
+  },
+  {
+    user_id: user1.id,
+    business_id: businesses[3].id,
+    rating: 1,
+    body: "Super cute little spot with fresh juices, adorable decor, and delicious food. Portions were small, but the quality of the coffee and food were great. They were really nice about accommodating a group of 12 of us and even gave us the 10% off yelp offer for the entire bill.  Would come back if in the area."
+  },
+  {
+    user_id: user2.id,
+    business_id: businesses[3].id,
+    rating: 2,
+    body: "moderate"
+  },
+  {
+    user_id: user3.id,
+    business_id: businesses[3].id,
+    rating: 3,
+    body: "moderate"
+  },
+  {
+    user_id: user4.id,
+    business_id: businesses[3].id,
+    rating: 4,
+    body: "moderate"
+  },
+  {
+    user_id: user5.id,
+    business_id: businesses[3].id,
+    rating: 5,
+    body: "moderate"
+  },
+  {
+    user_id: user1.id,
+    business_id: businesses[4].id,
+    rating: 1,
+    body: "I'm definitely a fan of this revamped La Parisienne in FiDi.  It's a quaint lunch spot with grab and go items, but they also have seating for a casual mealtime as well.  I had lunch here with a friend last week, and we enjoyed our simple, French inspired, hot bistro sandwiches (the classic 'Monsieur' and the 'Forestier'), and some soft drinks.. the house lemonade was great.  Service was friendly and efficient, and the bright and contemporary design-forward decor is absolutely lovely."
+  },
+  {
+    user_id: user2.id,
+    business_id: businesses[4].id,
+    rating: 2,
+    body: "moderate"
+  },
+  {
+    user_id: user3.id,
+    business_id: businesses[4].id,
+    rating: 3,
+    body: "moderate"
+  },
+  {
+    user_id: user4.id,
+    business_id: businesses[4].id,
+    rating: 4,
+    body: "moderate"
+  },
+  {
+    user_id: user5.id,
+    business_id: businesses[4].id,
+    rating: 5,
+    body: "moderate"
+  },
+  {
+    user_id: user1.id,
+    business_id: businesses[5].id,
+    rating: 1,
+    body: "Very Local place and enjoyable food and the owners our wonderful and will chat up a storm with ya!  Support local and they just told us they will be getting wine and beer license soon!!"
+  },
+  {
+    user_id: user2.id,
+    business_id: businesses[5].id,
+    rating: 2,
+    body: "moderate"
+  },
+  {
+    user_id: user3.id,
+    business_id: businesses[5].id,
+    rating: 3,
+    body: "moderate"
+  },
+  {
+    user_id: user4.id,
+    business_id: businesses[5].id,
+    rating: 4,
+    body: "moderate"
+  },
+  {
+    user_id: user5.id,
+    business_id: businesses[5].id,
+    rating: 5,
+    body: "moderate"
+  }
+  ]);
+
 Photo.destroy_all();
 
 photo = Photo.create!([

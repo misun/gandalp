@@ -7,7 +7,7 @@ const businessesReducer = ( oldState = {}, action ) => {
 
   switch (action.type) {
     case RECEIVE_NEW_BIZ:
-      return merge({}, oldState, { [action.business.id]: action.business});
+      return merge({}, oldState, { [action.payload.business.id]: action.payload.business});
     case RECEIVE_ALL_BIZ:
       return merge({}, oldState, action.businesses);
     case REMOVE_BIZ:

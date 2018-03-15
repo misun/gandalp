@@ -35,6 +35,9 @@ class Api::BusinessesController < ApplicationController
 
   def show
     @business = Business.find(params[:id])
+    @photos = @business.photos.map do |photo|
+      photo.image.url
+    end
 
     if @business
       render :show

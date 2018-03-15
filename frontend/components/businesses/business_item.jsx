@@ -4,27 +4,25 @@ import { MdStar, MdStarBorder, MdStars,  MdStarOutline, MdStarHalf, MdBuild} fro
 
 class BusinessItem extends React.Component{
 
-  constructor(props){
-    super(props);
-  }
-  componentDidMount(){
-    this.props.fetchBizAllPhotos(this.props.business.id);
-  }
-
   render(){
-    const photo_url = this.props.business.photos ? this.props.business.photos[0] : null;
+    const { business } = this.props;
 
-    let biz_item;
+    let rating = [];
+
+    for(let i=0; i < business.review.rating; i++){
+      rating.push(<MdStar size="20px" color="#ed883b"/>);
+    }
+
     if (this.props.parent === 'biz-home'){
       return (
         <ul>
           <li><Link to={`/business/${this.props.business.id}`}>
-            <img src={ photo_url } />
+            <img src={ business.photo } />
           </Link></li>
-          <li>{ this.props.business.name }</li>
-          <li>{ this.props.business.price_range }</li>
-          <li>{ this.props.business.category }</li>
-          <li>{ this.props.business.address }</li>
+          <li>{ business.name }</li>
+          <li>{ business.price_range }</li>
+          <li>{ business.category }</li>
+          <li>{ business.address }</li>
         </ul>
       );
     } else{
@@ -32,49 +30,49 @@ class BusinessItem extends React.Component{
         <div className="biz-item-wrapper">
           <div className="biz-item-top">
             <div className="item-left">
-              <Link to={`/business/${this.props.business.id}`}>
-                <img className="biz-idx-img" src={ photo_url } />
+              <Link to={`/business/${business.id}`}>
+                <img className="biz-idx-img" src={ business.photo } />
               </Link>
             </div>
             <div className="item-middle">
-                <h1>{ this.props.business.name }</h1>
+                <h1>{ business.name }</h1>
                 <div className="review-rate-star">
-                  <MdStar color="#ed883b"/>
-                  <MdStar color="#ed883b"/>
-                  <MdStar color="#ed883b"/>
-                  <MdStar color="#ed883b"/>
-                  <MdStar color="#ed883b"/>
+                  { rating }
                   &nbsp;&nbsp;&nbsp;
-                  <h4>212 Reviews</h4>
+                  <h4>{ business.review_cnt} Reviews</h4>
                 </div>
 
                 <div className="biz-header-info">
-                  <span className="price-range">$$ {this.props.business.price_range}</span>
+                  <span className="price-range">$$ {business.price_range}</span>
                     &nbsp;&nbsp;&nbsp;
                   <span className="category">
-                    { this.props.business.category }</span>
+                    { business.category }</span>
                 </div>
             </div>
             <div className="item-right">
-              <div>{ this.props.business.address }</div>
-              <div>{ this.props.business.phone }</div>
+              <div>{ business.address }</div>
+              <div>{ business.phone }</div>
             </div>
           </div>
           <div className="biz-item-bottom">
             <div className="item-left"></div>
             <div className="item-wide-right">
-              review
-              <MdBuild size={40} />
+              <div className="review-idx-thumb">
+                <img src={ business.user_img } />
+              </div>
+              <div className="review-idx-content">
+                <p>
+                  { business.review.body }
+                </p>
+                <Link to={`/business/${business.id}`}>
+                  read more
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       );
     }
-    return (
-      <div>
-      biz_item;
-      </div>
-    );
   }
 }
 export default BusinessItem;

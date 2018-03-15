@@ -83,7 +83,7 @@
 
 
 .biz-leftbar{
-  background-color: #e1e6ef;
+  /* background-color: #e1e6ef; */
   min-width: 660px;
   width: calc(100% - 300px);
 }
@@ -101,4 +101,8 @@
   padding-top: 6px;
   font-size: 30px;
   line-height: 1.16667em;
+}
+
+.review-content{
+
 }

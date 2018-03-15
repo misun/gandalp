@@ -5,15 +5,19 @@ export const RECEIVE_NEW_BIZ = "RECEIVE_NEW_BIZ";
 export const RECEIVE_ALL_BIZ = "RECEIVE_ALL_BIZ";
 export const REMOVE_BIZ = "REMOVE_BIZ";
 
-export const receiveBiz = business => ({
-  type: RECEIVE_NEW_BIZ,
-  business
-});
+export const receiveBiz = payload => {
+  return {
+    type: RECEIVE_NEW_BIZ,
+    payload //TODO delete the 'reviews' key
+  };
+};
 
-export const receiveAllBiz = businesses => ({
-  type: RECEIVE_ALL_BIZ,
-  businesses
-});
+export const receiveAllBiz = businesses => {
+  return {
+    type: RECEIVE_ALL_BIZ,
+    businesses
+  };
+};
 
 export const removeBiz = businessId => ({
   type: REMOVE_BIZ,
