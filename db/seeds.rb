@@ -9,7 +9,7 @@ User.destroy_all();
 
 User.create!(
   username: "guest", f_name: "guest", l_name: "guest", zip_code:"00000", password: "starwars",
-  image: "https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg"
+  image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/users/images/demo/user3.jpg"
 );
 user1 = User.create!(
   username: "misun", f_name: "misun", l_name: "son", zip_code: "07643", password: "starwars",
