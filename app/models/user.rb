@@ -26,7 +26,7 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  has_attached_file :image, default_url: 'guest_profile.jpeg'
+  has_attached_file :image, default_url: "https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   has_many :businesses,
