@@ -23,7 +23,6 @@ const Review = ({ review, user}) => {
             {rating}
             &nbsp;&nbsp;&nbsp;
             <h4>{ review.created_at }</h4>
-            <h4>{ user.username }</h4>
           </div>
 
           <p>{review.body}</p>
