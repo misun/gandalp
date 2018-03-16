@@ -42,21 +42,16 @@
 .biz-item-wrapper {
     width: 100%;
     height: 100%;
-    /* border-top: 1px solid #ccc; */
-    /* margin: 5px 0 5px 0; */
 }
 
 .biz-item-bottom {
     height: calc( 100% - 90px);
-    background-color: aliceblue;
     display: flex;
     justify-content: space-between;
-    /* background-color: pink; */
 }
 
 .item-left {
     width: 90px;
-    /* background-color: aquamarine; */
 }
 
 .item-middle {
@@ -66,7 +61,6 @@
 
 .item-right {
     width: calc((100% - 90px)/2);
-    /* background-color:  sandybrown; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -74,8 +68,6 @@
 
 .item-wide-right {
     width: calc(100% - 90px);
-    /* background-color:  #c7ea70; */
     display: flex;
-    /* justify-content: center; */
     align-items: center;
 }

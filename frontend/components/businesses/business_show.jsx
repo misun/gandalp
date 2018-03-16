@@ -17,7 +17,7 @@ class BusinessShow extends React.Component {
               <a href={ photo } target="_blank" >
                 <img src={ photo } />
               </a>
-              <div className="desc">Add a description of the image here</div>
+              <div className="desc"></div>
             </div>
         )) : null;
 
