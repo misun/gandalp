@@ -10,16 +10,16 @@
 
 
 ### User Login
-![login](https://user-images.githubusercontent.com/3492959/37532414-53cff3d4-2915-11e8-9216-2364a91efeb7.png)
+![login](https://user-images.githubusercontent.com/3492959/37535808-3831d494-291f-11e8-9fb5-6592f82c0518.png)
 
 ### User Signup
-![signup](https://user-images.githubusercontent.com/3492959/37532418-55c10d7c-2915-11e8-97f6-25e212d5ce5c.png)
+![signup](https://user-images.githubusercontent.com/3492959/37535805-3735a6d8-291f-11e8-92b9-80cb06fc1a27.png)
 
 ### Business Index View
-![biz_index](https://user-images.githubusercontent.com/3492959/37532247-d41042fc-2914-11e8-8660-90887312f897.png)
+![biz_index](https://user-images.githubusercontent.com/3492959/37535992-bc801f3a-291f-11e8-8a39-63a45f7683ed.png)
 
 ### Business Show View
-![biz_show](https://user-images.githubusercontent.com/3492959/37532441-6a2e05e4-2915-11e8-8c35-50e22022ee29.png)
+![biz_show](https://user-images.githubusercontent.com/3492959/37535821-3ee63672-291f-11e8-8d8c-53dd3238f062.png)
 
 # Future Development
 
