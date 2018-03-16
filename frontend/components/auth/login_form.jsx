@@ -30,7 +30,7 @@ class LoginForm extends React.Component {
       <div>
       <Header />
       <main className="content">
-        <section className="content-sidebar">
+        <section className="content-topbar">
           <div className="session-form">
             <div className="session-header">
               <h2>Log In to Gandalp</h2>
@@ -79,7 +79,7 @@ class LoginForm extends React.Component {
           </div>
         </section>
 
-        <section className="content-main">
+        <section className="content-bottombar">
             <img className="session-img" />
         </section>
       </main>

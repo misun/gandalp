@@ -15,4 +15,4 @@ json.sunday business.sunday
 json.photo business.photos.first.image.url
 json.review business.reviews.first
 json.review_cnt business.reviews.count
-json.user_img  business.reviews.first.user.image.url
+json.user_img  business.reviews.first.user.image.url    

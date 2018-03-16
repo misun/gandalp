@@ -15,6 +15,7 @@ json.business do
   json.sunday business.sunday
   json.review_ids business.review_ids
   json.review_cnt business.reviews.count
+  json.avg_rating business.reviews.average(:rating).to_i
 
   json.photos photos
 end

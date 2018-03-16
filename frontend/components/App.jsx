@@ -7,11 +7,13 @@ import BusinessHomeContainer from './businesses/business_home_container';
 import BusinessIndexContainer from './businesses/business_index_container';
 import BusinessShowContainer from './businesses/business_show_container.js';
 import Home from './layouts/home';
+import ReviewCreateContainer from './reviews/review_create_container';
 
 const App = () => {
   return (
     <div>
       <Switch>
+
         <AuthRoute
           exact
           path='/login'
@@ -21,6 +23,11 @@ const App = () => {
           exact
           path='/signup'
           component={ SignupFormContainer } />
+
+        <Route
+            exact
+            path='/business/:businessId/reviews/new'
+            component={ ReviewCreateContainer } />
 
         <Route
           exact

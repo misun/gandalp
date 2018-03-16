@@ -2,7 +2,7 @@ import React from 'react';
 import { MdStar, MdStarBorder, MdStars,  MdStarOutline, MdStarHalf, MdBuild} from 'react-icons/lib/md';
 import Header from '../layouts/header';
 import Review from './review';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class BusinessShow extends React.Component {
     componentDidMount(){
@@ -22,8 +22,15 @@ class BusinessShow extends React.Component {
         )) : null;
 
       const reviewsComponent = reviews.map( (review) => (
-        <Review review={review} user={review.user} key={review.id} />
+        <Review key={review.id} review={review} user={review.user}  />
       ));
+
+
+      let rating = [];
+
+      for(let i=0; i < business.avg_rating; i++){
+        rating.push(<MdStar size="20px" color="#ed883b"/>);
+      }
 
       return(
           <div className="biz-content">
@@ -38,11 +45,7 @@ class BusinessShow extends React.Component {
                     <div className="review-rate">
 
                       <div className="review-rate-star">
-                        <MdStar color="#ed883b"/>
-                        <MdStar color="#ed883b"/>
-                        <MdStar color="#ed883b"/>
-                        <MdStar color="#ed883b"/>
-                        <MdStar color="#ed883b"/>
+                        { rating }
                         &nbsp;&nbsp;&nbsp;
                         <h4>{ business.review_cnt } Reviews</h4>
                       </div>
@@ -58,11 +61,11 @@ class BusinessShow extends React.Component {
                   </div>
 
                   <div className="biz-header-right">
-                    <a  href="#" className="write-review">
+                    <Link to={`/business/${business.id}/reviews/new`} className="write-review">
                       <MdStar size={23} color="white" />
                       &nbsp;
                       write a review
-                    </a>
+                    </Link>
                     <span className="btn-group clearfix">
                       <a href="#" className="ybtn">Add Photo</a>
                       <a href="#" className="ybtn">Share</a>
