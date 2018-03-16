@@ -48,7 +48,12 @@
 
 .review-left{width: 40%;}
 
-.review-left-top{display: flex;justify-content: space-evenly;padding: 10px;width: 100%;height: 100%;}
+.review-left-top{
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
 
 .review-left-top img{
   width: 5em;
