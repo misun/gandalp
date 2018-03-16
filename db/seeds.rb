@@ -8,33 +8,33 @@
 User.destroy_all();
 
 User.create!(
-  username: 'guest', f_name: 'guest', l_name: 'guest', zip_code:'00000', password: 'starwars',
-  image: 'https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg'
+  username: "guest", f_name: "guest", l_name: "guest", zip_code:"00000", password: "starwars",
+  image: "https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg"
 );
 user1 = User.create!(
-  username: 'misun1', f_name: 'misun1', l_name: 'son', zip_code: '07643', password: 'starwars',
-  image: 'https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg'
+  username: "misun", f_name: "misun", l_name: "son", zip_code: "07643", password: "starwars",
+  image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/users/images/demo/user1.jpg"
 );
 user2 = User.create!(
-  username: 'misun2', f_name: 'misun2', l_name: 'son', zip_code: '12312', password: 'starwars',
-  image: 'https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg');
+  username: "jeniferxxx@mail.com", f_name: "jenifer", l_name: "Lawrence", zip_code: "12312", password: "starwars",
+  image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/users/images/demo/user2.jpg");
 user3 = User.create!(
-  username: 'misun3', f_name: 'misun3', l_name: 'son',
-  zip_code: '24124', password: 'starwars',
-  image: 'https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg'
+  username: "goden@mail.com", f_name: "golden", l_name: "retriever",
+  zip_code: "24124", password: "starwars",
+  image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/users/images/demo/user3.jpg"
   );
 user4 = User.create!(
-  username: 'misun4', f_name: 'misun3', l_name: 'son',
-  zip_code: '23145', password: 'starwars',
-  image: 'https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg');
+  username: "balck@mail.com", f_name: "French", l_name: "bulldog",
+  zip_code: "23145", password: "starwars",
+  image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/users/images/demo/user4.jpg");
 user5 = User.create!(
-  username: 'misun5', f_name: 'misun3', l_name: 'son',
-  zip_code: '12345', password: 'starwars',
-  image: 'https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg');
+  username: "poodle", f_name: "poodle", l_name: "son",
+  zip_code: "12345", password: "starwars",
+  image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/users/images/demo/user5.jpg");
 user6 = User.create!(
-  username: 'misun6', f_name: 'misun3', l_name: 'son',
-  zip_code: '56778', password: 'starwars',
-  image: 'https://s3.us-east-2.amazonaws.com/gandalp-pro/users/images/000/000/001/original/guest_profile.jpeg');
+  username: "misun6", f_name: "misun3", l_name: "son",
+  zip_code: "56778", password: "starwars",
+  image: "https://s3.us-east-2.amazonaws.com/gandalp-dev/users/images/demo/user6.jpg");
 
 Business.destroy_all();
 
