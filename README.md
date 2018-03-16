@@ -1,24 +1,17 @@
-# README
+# Gandalp
+[Gandalp Live](http://aa-selp.herokuapp.com/#/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![gandalp_screenshot](https://user-images.githubusercontent.com/3492959/37530480-08dc442c-2910-11e8-8445-92b48f296492.png)
 
-Things you may want to cover:
+# Features 
+### homepage 
 
-* Ruby version
+### User Login/Signup
 
-* System dependencies
+### Business View
 
-* Configuration
+# Select Code Snippets
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Future Development
+### User Profile
+### Search
