@@ -5,7 +5,7 @@ const Review = ({ review, user}) => {
   let rating = [];
 
   for(let i=0; i < review.rating; i++){
-    rating.push(<MdStar size="20px" color="#ed883b"/>);
+    rating.push(<MdStar key={i} size="20px" color="#ed883b"/>);
   }
   return(
     <div className="review">

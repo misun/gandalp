@@ -22,9 +22,12 @@ const defaultbiz = {
 const msp = (state, ownProps) => {
   const business = state.entities.businesses[ownProps.match.params.businessId] || defaultbiz ;
   const reviews = business.review_ids ? business.review_ids.map( id => ( state.entities.reviews[id] )) : [];
+  let currentUser = state.session.currentUser;
+
   return {
     business,
-    reviews
+    reviews,
+    currentUser
   };
 };
 

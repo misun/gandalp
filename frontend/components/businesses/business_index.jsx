@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BusinessItemContainer from './business_item_container';
-import Header from '../layouts/header';
 import { MdBuild} from 'react-icons/lib/md';
 
 class BusinessIndex extends React.Component{
@@ -17,8 +16,6 @@ class BusinessIndex extends React.Component{
     ));
     return (
       <div className="biz-content">
-
-        <Header />
         <section className="biz-content-top">
           <h1><strong>Places</strong> near Civic Center, Manhattan, NY</h1>
         </section>

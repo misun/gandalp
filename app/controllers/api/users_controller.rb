@@ -5,9 +5,9 @@ class Api::UsersController < ApplicationController
     if @user.save
       login(@user)
 
-      render :show
+      render :show, status:200
     else
-      render json:{ errors: @user.errors.full_messages }, status: 403
+      render json: @user.errors.full_messages, status: 422
     end
   end
 
@@ -15,9 +15,9 @@ class Api::UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if @user
-      render :show
+      render :show,  status:200
     else
-      render json:{ errors: ['no user found'] }, status: 404
+      render json: ['no user found'], status: 404
     end
   end
 

@@ -30,13 +30,13 @@ class SignupForm extends React.Component {
   render(){
     return (
       <div>
-        <Header />
         <main className="content">
           <section className="content-topbar">
             <div className='session-form'>
               <div className="session-header">
                 <h2>Log In to Gandalp</h2>
-                <h4>New to Gandalp? Sign up</h4>
+                <h4>New to Gandalp? <Link className='login-link' to='/login'> Log in</Link></h4>
+
                 <p>
                 By logging in, you agree to Gandalp’s Terms of Service and Privacy Policy.
                 </p>

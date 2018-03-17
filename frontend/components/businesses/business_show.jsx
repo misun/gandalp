@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdStar, MdStarBorder, MdStars,  MdStarOutline, MdStarHalf, MdBuild} from 'react-icons/lib/md';
-import Header from '../layouts/header';
 import Review from './review';
+import ReviewCreateContainer from '../reviews/review_create';
 import { withRouter, Link } from 'react-router-dom';
 
 class BusinessShow extends React.Component {
@@ -10,7 +10,7 @@ class BusinessShow extends React.Component {
     }
 
     render(){
-      const {business, reviews } = this.props;
+      const {business, reviews, currentUser } = this.props;
 
       const gallery = business.photos ? business.photos.map( (photo, idx) => (
             <div className={ ((idx === 1) ? "gallery-main" : "gallery") } key={ idx } >
@@ -29,13 +29,11 @@ class BusinessShow extends React.Component {
       let rating = [];
 
       for(let i=0; i < business.avg_rating; i++){
-        rating.push(<MdStar size="20px" color="#ed883b"/>);
+        rating.push(<MdStar key={i} size="20px" color="#ed883b"/>);
       }
 
       return(
           <div className="biz-content">
-
-            <Header />
 
             <section className="biz-content-top">
               <div className="biz-top-main">
@@ -61,11 +59,14 @@ class BusinessShow extends React.Component {
                   </div>
 
                   <div className="biz-header-right">
-                    <Link to={`/business/${business.id}/reviews/new`} className="write-review">
+
+                    <Link
+                      to={`/business/${business.id}/reviews/new`} className="write-review-btn" >
                       <MdStar size={23} color="white" />
                       &nbsp;
                       write a review
                     </Link>
+
                     <span className="btn-group clearfix">
                       <a href="#" className="ybtn">Add Photo</a>
                       <a href="#" className="ybtn">Share</a>
