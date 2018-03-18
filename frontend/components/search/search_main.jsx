@@ -22,8 +22,10 @@ class SearchMain extends React.Component {
   handleSubmit(e){
    e.preventDefault();
    const keywords = Object.assign({}, this.state);
-   this.props.processForm(keywords).then(this.props.history.push(`/business?bizName=${this.state.bizName}&loc=${this.state.loc}`));
-   
+
+   this.props.processForm({keywords}).then( this.props.history.push(`/business?bizName=${this.state.bizName}&loc=${this.state.loc}`)
+   );
+
   }
 
   render(){

@@ -5,31 +5,32 @@ import { MdBuild} from 'react-icons/lib/md';
 
 class BusinessIndex extends React.Component{
   componentDidMount(){
-
-
     const search = this.props.location.search;
     const params = new URLSearchParams(search);
     const bizName = params.get('bizName');
     const loc = params.get('loc');
 
-    if (search){
+    if ( bizName || loc ){
+      debugger
       this.props.fetchAllBiz({keywords: {bizName, loc}});
     }else {
+      debugger
       this.props.fetchAllBiz();
     }
   }
 
   render(){
-    
+
     const businesses = this.props.businesses.map( biz => (
       <div className="biz-index-item" key={biz.id}>
-        <BusinessItemContainer key={biz.id} business={ biz } parent={ 'biz-index'} />
+        <BusinessItemContainer business={ biz } parent={ 'biz-index'} />
       </div>
     ));
+
     return (
       <div className="biz-content">
         <section className="biz-content-top">
-          <h1><strong>Places</strong> near Civic Center, Manhattan, NY</h1>
+           { this.props.loc ? <h1><strong>Places</strong> near { this.props.loc } </h1> : "" }
         </section>
 
         <section className="biz-content-bottom">

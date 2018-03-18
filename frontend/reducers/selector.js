@@ -6,6 +6,14 @@ export const selectBusiness = ({ businesses, reviews }, id) => {
   }
   return {};
 };
+
+export const selectBusinesses = ( businesses , bizName, loc) => {
+
+  const bizes = businesses.filter( biz => biz.name.includes(bizName) ).filter( biz => biz.address.includes(loc) );
+
+  return (bizes ? bizes : []);
+};
+
 export const asArray = ({ businesses }) => (
   Object.keys(businesses).map(key => businesses[key])
 );
