@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   //test logic
   window.dispatch = store.dispatch;
-  window.fetchBiz = fetchBiz;
   window.fetchAllBiz = fetchAllBiz;
   window.createReview = createReview;
   window.MarkerManager = MarkerManager;

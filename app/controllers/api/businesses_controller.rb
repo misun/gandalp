@@ -24,7 +24,7 @@ class Api::BusinessesController < ApplicationController
   end
 
   def index
-    @businesses = Business.all
+    @businesses =  keywords ? Business.keywords(keywords) : Business.all
 
     if @businesses
       render :index
@@ -73,6 +73,14 @@ class Api::BusinessesController < ApplicationController
 
   def business_params
     params.require(:business).permit(:name, :price_range, :category, :address, :phone, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday, :owner_id)
+  end
+
+  def bounds
+    params[:bounds]
+  end
+
+  def keywords
+    params[:keywords]
   end
 
   def sanitize_page_params

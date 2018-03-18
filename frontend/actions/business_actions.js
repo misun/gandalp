@@ -40,6 +40,6 @@ export const fetchBiz = businessId => dispatch => (
   BizAPIUtil.fetchBiz(businessId).then( biz => dispatch(receiveBiz(biz)))
 );
 
-export const fetchAllBiz = () => dispatch => (
-  BizAPIUtil.fetchAllBiz().then( bizz => dispatch(receiveAllBiz(bizz)) )
+export const fetchAllBiz = (keywords) => dispatch => (
+  BizAPIUtil.fetchAllBiz(keywords).then( bizz => dispatch(receiveAllBiz(bizz)) )
 );

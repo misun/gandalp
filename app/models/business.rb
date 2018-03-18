@@ -32,4 +32,12 @@ class Business < ApplicationRecord
 
   has_many :reviews
 
+  def self.keywords(keywords)
+    biz = self
+    biz = biz.where("name like ?", "%#{keywords[:bizName]}%") if keywords[:bizName] && keywords[:bizName] != ''
+    biz = biz.where("address like ?", "%#{keywords[:loc]}%") if keywords[:loc] && keywords[:loc] != ''
+
+    biz
+  end
+
 end

@@ -21,7 +21,6 @@ class MarkerManager {
   }
 
   updateMarker(biz){
-    console.log('time to update');
     this.createMarkerFromBusiness( biz, this.handleClick);
   }
 

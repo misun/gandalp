@@ -7,10 +7,11 @@ export const createBiz = ( business ) =>{
   });
 };
 
-export const fetchAllBiz = () => {
+export const fetchAllBiz = ( keywords ) => {
   return $.ajax({
     url: '/api/businesses',
-    method: 'GET'
+    method: 'GET',
+    data: keywords
   });
 };
 

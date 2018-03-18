@@ -26,7 +26,10 @@ class Map extends React.Component {
   }
   componentDidMount() {
     this.geocoder = new google.maps.Geocoder();
-    this.map = new google.maps.Map(this.refs.map, mapOptions);
+    // this.map = new google.maps.Map(this.refs.map, mapOptions);
+    this.map = new google.maps.Map(this.mapNode, mapOptions);
+
+    this.MarkerManager = new MarkerManager(this.map);
   }
 
   componentDidUpdate() {
@@ -80,7 +83,7 @@ class Map extends React.Component {
 
   render() {
     return (
-      <div id="map" className="map" ref="map">
+      <div id="map" className="map" ref={ map => this.mapNode = map }>
         Map
       </div>
     );
