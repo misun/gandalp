@@ -6,7 +6,7 @@
 
 .map-box{
   width: 300px;
-  background-color: white;
+  height: 357px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,7 @@
   width: calc(100% - 300px);
   /* background-color: skyblue; */
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .price-range{

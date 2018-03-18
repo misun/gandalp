@@ -1,8 +1,8 @@
 import React from 'react';
 import { MdStar, MdStarBorder, MdStars,  MdStarOutline, MdStarHalf, MdBuild} from 'react-icons/lib/md';
-import Review from './review';
-import ReviewCreateContainer from '../reviews/review_create';
 import { withRouter, Link } from 'react-router-dom';
+import Review from '../reviews/review';
+import Map from '../map/map';
 
 class BusinessShow extends React.Component {
     componentDidMount(){
@@ -10,14 +10,13 @@ class BusinessShow extends React.Component {
     }
 
     render(){
-      const {business, reviews, currentUser } = this.props;
+      const {business, reviews, currentUser, fetchBiz } = this.props;
 
       const gallery = business.photos ? business.photos.map( (photo, idx) => (
             <div className={ ((idx === 1) ? "gallery-main" : "gallery") } key={ idx } >
               <a href={ photo } target="_blank" >
                 <img src={ photo } />
               </a>
-              <div className="desc"></div>
             </div>
         )) : null;
 
@@ -77,8 +76,12 @@ class BusinessShow extends React.Component {
 
                 <div className="biz-sub-content">
                   <div className="map-box">
-                    <h1>map box</h1>
-                    <MdBuild size={60} />
+                    <Map
+                      business={business}
+                      businessId={business.id}
+                      singleBiz={true}
+                      fetchBiz={fetchBiz}
+                    />
                   </div>
                   <div className="show-case">
                     { gallery }

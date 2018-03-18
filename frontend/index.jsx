@@ -4,6 +4,7 @@ import Root from './components/root';
 import configureStore from './store/store';
 import {fetchBiz, fetchAllBiz} from './actions/business_actions';
 import {createReview} from './actions/review_actions';
+import MarkerManager from  './util/marker_manager';
 
 document.addEventListener('DOMContentLoaded', ()=>{
   const root = document.getElementById('root');
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   window.fetchBiz = fetchBiz;
   window.fetchAllBiz = fetchAllBiz;
   window.createReview = createReview;
+  window.MarkerManager = MarkerManager;
 
   ReactDOM.render(<Root store={ store }/>, root);
 });
