@@ -5,7 +5,7 @@ import { MdBuild} from 'react-icons/lib/md';
 
 class BusinessIndex extends React.Component{
   componentDidMount(){
-    debugger
+
 
     const search = this.props.location.search;
     const params = new URLSearchParams(search);
@@ -13,7 +13,6 @@ class BusinessIndex extends React.Component{
     const loc = params.get('loc');
 
     if (search){
-      debugger
       this.props.fetchAllBiz({keywords: {bizName, loc}});
     }else {
       this.props.fetchAllBiz();
@@ -21,7 +20,7 @@ class BusinessIndex extends React.Component{
   }
 
   render(){
-    debugger
+    
     const businesses = this.props.businesses.map( biz => (
       <div className="biz-index-item" key={biz.id}>
         <BusinessItemContainer key={biz.id} business={ biz } parent={ 'biz-index'} />
