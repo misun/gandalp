@@ -123,6 +123,10 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.session-form .err-msg{
+  color: #d32323;
+  padding-top: 5px;
+}
 
 .session-header {
   text-align: center;

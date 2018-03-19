@@ -26,6 +26,8 @@ class LoginForm extends React.Component {
   }
 
   render(){
+    const errors  = this.props.errors.session ? this.props.errors.session : "" ;
+
     return (
       <div>
       <main className="content">
@@ -39,6 +41,7 @@ class LoginForm extends React.Component {
               <p>
               By logging in, you agree to Gandalp’s Terms of Service and Privacy Policy.
               </p>
+              <p className="err-msg">{ errors }</p>
             </div>
             <hr align="center"/>
 
@@ -77,6 +80,7 @@ class LoginForm extends React.Component {
                 </div>
               </fieldset>
             </form>
+
           </div>
         </section>
 
