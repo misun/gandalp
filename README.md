@@ -19,9 +19,7 @@ With Gandalp simulator, users will be able to:
 
 ### Architecture and Technologies
 
-All features in this game would be implemented using native JavaScript DOM manipulation and, HTML5 canvas.
-
-This project will be implemented with the following technologies:
+This project is implemented with the following technologies:
 
 - `Ruby on Rails` for Backend
 - `React/Redux` for Frontend
