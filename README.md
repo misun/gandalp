@@ -21,8 +21,4 @@
 ### Business Show View
 ![biz_show](https://user-images.githubusercontent.com/3492959/37535821-3ee63672-291f-11e8-8d8c-53dd3238f062.png)
 
-# Future Development
 
-### User Profile
-### Search
-### Map
