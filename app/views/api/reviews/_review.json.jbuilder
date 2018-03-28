@@ -5,6 +5,7 @@ json.rating review.rating
 json.body review.body
 json.created_at review.created_at.strftime("%m/%d/%Y")
 json.updated_at review.updated_at
+json.img_url asset_path(review.image.url)
 json.user do
   json.id review.user.id
   json.username review.user.username

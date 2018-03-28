@@ -1,20 +1,26 @@
-export const createReview = ( review ) =>{
+export const createReview = (data) => {
+
   return $.ajax({
-    url: `/api/businesses/${review.business_id}/reviews`,
+    url: `/api/businesses/${data.business_id}/reviews`,
     method: 'POST',
-    data : { review }
+    dataType: 'json',
+    contentType: false,
+    processData: false,
+    data
   });
 };
 
-export const updateReview = ( review ) => {
+export const updateReview = (review) => {
   return $.ajax({
     url: `/api/businesses/${review.business_id}/reviews/${review.id}`,
     method: 'PATCH',
-    data: { review }
+    data: {
+      review
+    }
   });
 };
 
-export const deleteReview = ( reviewId ) => {
+export const deleteReview = (reviewId) => {
   return $.ajax({
     url: `/api/reviews/${reviewId}`,
     method: 'DELETE'

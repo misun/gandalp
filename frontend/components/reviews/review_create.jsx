@@ -5,9 +5,15 @@ class ReviewCreate extends React.Component{
 
   constructor(props){
     super(props);
-    this.state = this.props.review;
+
+    const defaultState = {
+      image: null,
+      imageUrl: null
+    }
+    this.state = Object.assign({}, defaultState, this.props.review);
 
     this.updateInput = this.updateInput.bind(this);
+    this.updateFile = this.updateFile.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -17,8 +23,15 @@ class ReviewCreate extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    const review = Object.assign({}, this.state);
-    this.props.processForm(review).then(()=>this.props.history.push(`/business/${this.props.match.params.businessId}`));
+
+    const formData = new FormData();
+    Object.keys(this.state).forEach( key => {
+
+      if ( key !== 'imageUrl' && this.state[key] !== null ){
+        formData.append(`review[${key}]`, this.state[key]);
+      }
+    })
+    this.props.processForm(formData).then(()=>this.props.history.push(`/business/${this.props.match.params.businessId}`));
   }
 
   mouseOver(rating){
@@ -36,6 +49,20 @@ class ReviewCreate extends React.Component{
     return e => this.setState({
       [field]: e.target.value
     });
+  }
+
+  updateFile(e){
+    let file = e.currentTarget.files[0];
+    let fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({
+        image: file,
+        imageUrl: fileReader.result
+      });
+    };
+    if (file){
+      fileReader.readAsDataURL(file);
+    }
   }
 
   render(){
@@ -84,6 +111,8 @@ class ReviewCreate extends React.Component{
                 value={this.state.body}
                 placeholder="Your review helps others learn about great local businesses. &#10;Please don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees."
                 />
+              <img src={this.state.imageUrl} />
+              <input type="file" onChange={this.updateFile}/>
             </div>
             <input type='submit' value={formType}/>
             </form>

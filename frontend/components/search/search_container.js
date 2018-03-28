@@ -6,8 +6,8 @@ import Search from './search';
 
 const mapStateToProps = state => ({
   businesses: asArray(state.entities.businesses)
-  minSeating: state.ui.filters.minSeating,
-  maxSeating: state.ui.filters.maxSeating
+  // lat: new URLSearchParams(location.search).get("lat"),
+  // lng: new URLSearchParams(location.search).get("lng")
 });
 
 const mapDispatchToProps = dispatch => ({

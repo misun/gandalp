@@ -23,9 +23,7 @@ class Header extends React.Component {
           <nav className="header-nav">
             <div className="header-nav-left">
               <ul className="header-list">
-                <li><a href="#">Write a review</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Talk</a></li>
+                <li><a href="#">Home</a></li>
               </ul>
             </div>
             <GreetingContainer />

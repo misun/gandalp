@@ -1,11 +1,9 @@
 class Api::ReviewsController < ApplicationController
 
-  before_action :sanitize_page_params, only: [:create, :update]
-
   def create
     @review = Review.new(review_params)
 
-    if @review.save!
+    if @review.save
       render :show
     else
       render json:{ errors: @review.errors.full_messages }, status: 403
@@ -48,12 +46,6 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:user_id, :business_id, :rating, :body)
-  end
-
-  def sanitize_page_params
-    params[:review][:user_id] = params[:review][:user_id].to_i
-
-    params[:review][:business_id] = params[:review][:business_id].to_i
+    params.require(:review).permit(:user_id, :business_id, :rating, :body, :image)
   end
 end

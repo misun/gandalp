@@ -26,6 +26,7 @@ const Review = ({ review, user}) => {
           </div>
 
           <p>{review.body}</p>
+          { review.img_url ? <img className="img-review" src={review.img_url} /> : "" }
         </div>
         <div className="review-footer">
         </div>

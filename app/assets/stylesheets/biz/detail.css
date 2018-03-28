@@ -121,9 +121,7 @@
   /* padding-top: 30px; */
 }
 div.gallery {
-    margin: 5px;
-    /* border: 1px solid #ccc; */
-    box-shadow: 5px 3px 3px #ccc;
+    margin: 5px -5px 5px -5px;
     float: left;
     width: 220px;
     height: 220px;
@@ -132,7 +130,6 @@ div.gallery {
 div.gallery-main {
     margin: 5px;
     /* border: 1px solid #ccc; */
-    box-shadow: 5px 3px 3px #ccc;
     float: left;
     width: 250px;
     height: 250px;

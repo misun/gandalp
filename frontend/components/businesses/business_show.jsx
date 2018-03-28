@@ -66,11 +66,11 @@ class BusinessShow extends React.Component {
                       write a review
                     </Link>
 
-                    <span className="btn-group clearfix">
+                    {/*<span className="btn-group clearfix">
                       <a href="#" className="ybtn">Add Photo</a>
                       <a href="#" className="ybtn">Share</a>
                       <a href="#" className="ybtn">Bookmark</a>
-                    </span>
+                    </span> */}
                   </div>
                 </div>
 

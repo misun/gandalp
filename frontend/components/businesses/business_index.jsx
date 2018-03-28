@@ -2,19 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BusinessItemContainer from './business_item_container';
 import { MdBuild} from 'react-icons/lib/md';
+import Map from '../map/map';
 
 class BusinessIndex extends React.Component{
   componentDidMount(){
-    const search = this.props.location.search;
-    const params = new URLSearchParams(search);
-    const bizName = params.get('bizName');
-    const loc = params.get('loc');
+    const { bizName, loc } = this.props;
 
     if ( bizName || loc ){
-      debugger
       this.props.fetchAllBiz({keywords: {bizName, loc}});
     }else {
-      debugger
       this.props.fetchAllBiz();
     }
   }
@@ -40,7 +36,7 @@ class BusinessIndex extends React.Component{
             </div>
 
             <div className="biz-rightbar">
-                map box <MdBuild size={40} />
+                {/*map */}
             </div>
 
           </div>

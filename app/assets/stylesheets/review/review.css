@@ -171,3 +171,8 @@
   background-color: #ed0008;
   background: linear-gradient(#ed0008,#dd1600);
 }
+
+.img-review{
+  width: 330px;
+  border-radius: 5px;
+}
