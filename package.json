@@ -1,5 +1,5 @@
 {
-  "name": "Selp",
+  "name": "Gandalp",
   "private": true,
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -33,13 +33,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/misun/selp.git"
+    "url": "git+https://github.com/misun/gandalp.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/misun/selp/issues"
+    "url": "https://github.com/misun/gandalp/issues"
   },
-  "homepage": "https://github.com/misun/selp#readme"
+  "homepage": "https://github.com/misun/gandalp#readme"
 }
