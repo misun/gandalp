@@ -1,4 +1,4 @@
-import { RECEIVE_NEW_BIZ, RECEIVE_ALL_BIZ, REMOVE_BIZ } from '../actions/business_actions';
+import { RECEIVE_NEW_BIZ, RECEIVE_ALL_BIZ, RECEIVE_FILTERED_BIZ, REMOVE_BIZ } from '../actions/business_actions';
 import { RECEIVE_BIZ_ALL_PHOTOS } from '../actions/photo_actions';
 import merge from 'lodash/merge';
 
@@ -10,6 +10,8 @@ const businessesReducer = ( oldState = {}, action ) => {
       return merge({}, oldState, { [action.payload.business.id]: action.payload.business});
     case RECEIVE_ALL_BIZ:
       return merge({}, oldState, action.businesses);
+    case RECEIVE_FILTERED_BIZ:
+      return merge({}, action.businesses);
     case REMOVE_BIZ:
       let newState = merge({}, oldState);
       delete newState[action.businessId];
@@ -20,7 +22,6 @@ const businessesReducer = ( oldState = {}, action ) => {
     case RECEIVE_BIZ_ALL_PHOTOS:
       let photoState = merge({}, oldState);
 
-      // 
       const bizId = Object.values(action.photos)[0].business_id;
       photoState[bizId].photos = Object.values(action.photos).map(p => p.img_url);
 

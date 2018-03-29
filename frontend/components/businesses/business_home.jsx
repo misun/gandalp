@@ -14,12 +14,14 @@ class BusinessHome extends React.Component{
       </div>
     ));
     return (
-      <section className="biz-index">
-        <h3>Hot & New Businesses </h3>
-        <div className="biz-index">
+      <section className="biz-home">
+        <div className="biz-home-btm">
+          <h3>Hot & New Businesses </h3>
+          <div className="biz-home-btm-main">
             { businesses }
+          </div>
+          <Link to='/business'><h3>See more hot and new businesses</h3></Link>
         </div>
-        <Link to='/business'><h3>See more hot and new businesses</h3></Link>
       </section>
     );
   }

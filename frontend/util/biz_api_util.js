@@ -7,7 +7,14 @@ export const createBiz = ( business ) =>{
   });
 };
 
-export const fetchAllBiz = ( keywords ) => {
+export const fetchAllBiz = () => {
+  return $.ajax({
+    url: '/api/businesses',
+    method: 'GET'
+  });
+};
+
+export const fetchFilteredBiz = ( keywords ) => {
   return $.ajax({
     url: '/api/businesses',
     method: 'GET',

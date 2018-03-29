@@ -1,34 +1,31 @@
 import { connect } from 'react-redux';
 import BusinessIndex from './business_index';
-import { fetchAllBiz } from '../../actions/business_actions';
+import { fetchAllBiz, fetchFilteredBiz } from '../../actions/business_actions';
 import { fetchBizAllPhotos } from '../../actions/photo_actions';
 import { withRouter } from 'react-router-dom';
 import { selectBusinesses } from '../../reducers/selector.js';
 
 const msp = (state, {location}) => {
-  let businesses = state.entities.businesses ? Object.values(state.entities.businesses) : {};
-
+  // let businesses = state.entities.businesses ? Object.values(state.entities.businesses) : {};
+  //
   const search = location.search;
   const params = new URLSearchParams(search);
   const bizName = params.get('bizName');
   const loc = params.get('loc');
 
-  if (bizName || loc ){
-    businesses = selectBusinesses(businesses, bizName, loc ),
-    bizName,
-    loc
-  }
-
   return {
-    businesses,
-    loc
+    businesses: state.entities.businesses ? state.entities.businesses : {} ,
+    loc,
+    bizName
   };
 
 };
 
-const mdp = dispatch => ({
-  fetchAllBiz: ( keywords ) => dispatch(fetchAllBiz( keywords ))
-  // fetchBizAllPhotos: ( bizId ) => dispatch( fetchBizAllPhotos( bizId ))
-});
+const mdp = dispatch => {
+  return {
+    fetchAllBiz: () => dispatch(fetchAllBiz()),
+    fetchFilteredBiz: (keywords) => dispatch(fetchFilteredBiz(keywords))
+  };
+};
 
 export default withRouter(connect(msp, mdp)(BusinessIndex));

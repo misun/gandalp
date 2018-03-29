@@ -23,8 +23,9 @@ class SearchMain extends React.Component {
    e.preventDefault();
    const keywords = Object.assign({}, this.state);
 
-   this.props.processForm({keywords}).then( this.props.history.push(`/business?bizName=${this.state.bizName}&loc=${this.state.loc}`)
+   this.props.fetchFilteredBiz({keywords}).then( this.props.history.push(`/business?bizName=${this.state.bizName}&loc=${this.state.loc}`)
    );
+   // this.props.history.push(`/business?bizName=${this.state.bizName}&loc=${this.state.loc}`);
 
   }
 

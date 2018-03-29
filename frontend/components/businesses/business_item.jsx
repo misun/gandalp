@@ -10,7 +10,7 @@ class BusinessItem extends React.Component{
     let rating = [];
 
     for(let i=0; i < business.review.rating; i++){
-      rating.push(<MdStar size="20px" color="#ed883b"/>);
+      rating.push(<MdStar key={i} size="20px" color="#ed883b"/>);
     }
 
     if (this.props.parent === 'biz-home'){

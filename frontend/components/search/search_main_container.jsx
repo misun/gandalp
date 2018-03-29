@@ -1,7 +1,7 @@
 import SearchMain from './search_main';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { fetchAllBiz } from '../../actions/business_actions';
+import { fetchFilteredBiz } from '../../actions/business_actions';
 
 const msp = (state, ownProps) => {
   return {
@@ -11,7 +11,7 @@ const msp = (state, ownProps) => {
 };
 
 const mdp = dispatch => ({
-  processForm: (keywords) => dispatch(fetchAllBiz(keywords))
+  fetchFilteredBiz: (keywords) => dispatch(fetchFilteredBiz(keywords))
 });
 
 

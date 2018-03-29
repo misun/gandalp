@@ -1,14 +1,14 @@
-
-
-
-.biz-index{
+.biz-home{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: #ffffff;
+}
+.biz-home-btm{width: 960px;display: flex;flex-direction: column;text-align: center;}
+.biz-home-btm-main{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  background-color: #ffffff
 }
-
-
 
 .biz-index h3{
   word-wrap: break-word!important;
@@ -84,24 +84,24 @@
 .biz-bottom-main{
   /* background-color: #fbfbff; */
   display: flex;
-  width: 80%;
-
+  width: 960px;
+  justify-content: center;
 }
-
 
 .biz-leftbar{
   /* background-color: #e1e6ef; */
-  min-width: 660px;
-  width: calc(100% - 300px);
+  /* min-width: 660px; */
+  width: 67%;
 }
 .biz-rightbar{
-  /* background-color: pink; */
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: safe;
   align-items: center;
   min-width: 300px;
-  width: calc(100% - 660px);
+  width: 33%;
+  padding-left: 20px;
 }
 
 .biz-header-left h1{

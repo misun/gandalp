@@ -2,26 +2,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BusinessItemContainer from './business_item_container';
 import { MdBuild} from 'react-icons/lib/md';
-import Map from '../map/map';
+import MapIndex from '../map/map_index';
 
 class BusinessIndex extends React.Component{
   componentDidMount(){
     const { bizName, loc } = this.props;
 
     if ( bizName || loc ){
-      this.props.fetchAllBiz({keywords: {bizName, loc}});
+      this.props.fetchFilteredBiz({keywords: {bizName, loc}});
     }else {
       this.props.fetchAllBiz();
     }
   }
 
   render(){
-
-    const businesses = this.props.businesses.map( biz => (
+    const businesses =  Object.values(this.props.businesses).map( biz => (
       <div className="biz-index-item" key={biz.id}>
         <BusinessItemContainer business={ biz } parent={ 'biz-index'} />
       </div>
     ));
+
+    // we need to provide a center coordinate for our map, this is SF
+    const mapCenter = { lat: 37.7758, lng: -122.435 };
+
 
     return (
       <div className="biz-content">
@@ -36,7 +39,7 @@ class BusinessIndex extends React.Component{
             </div>
 
             <div className="biz-rightbar">
-                {/*map */}
+                <MapIndex center={mapCenter} businesses={this.props.businesses}/>
             </div>
 
           </div>

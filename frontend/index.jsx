@@ -21,9 +21,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   //test logic
   window.dispatch = store.dispatch;
-  window.fetchAllBiz = fetchAllBiz;
-  window.createReview = createReview;
-  window.MarkerManager = MarkerManager;
+  window.store = store;
 
   ReactDOM.render(<Root store={ store }/>, root);
 });
