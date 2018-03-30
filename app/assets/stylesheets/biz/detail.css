@@ -118,7 +118,12 @@
 }
 
 .biz-more-info{
-  /* padding-top: 30px; */
+  padding-top: 30px;
+}
+
+.biz-more-info ul>li {
+    margin: 10px 5px;
+    word-wrap: break-word;
 }
 div.gallery {
     margin: 5px -5px 5px -5px;

@@ -91,32 +91,67 @@ class BusinessShow extends React.Component {
 
                 <div className="biz-rightbar">
                   <div className="biz-info">
-                    <ul><h2>Hours</h2>
-                      <li>
-                        <label>Mon : {business.monday}</label>
-                      </li>
-                      <li>
-                        <label>Tue : {business.tuesday}</label>
-                      </li>
-                      <li>
-                        <label>Wed : {business.wednesday}</label>
-                      </li>
-                      <li>
-                        <label>Thu : {business.thursday}</label>
-                      </li>
-                      <li>
-                        <label>Fri : {business.friday}</label>
-                      </li>
-                      <li>
-                        <label>Sat : {business.saturday}</label>
-                      </li>
-                      <li>
-                        <label>Sun : {business.sunday}</label>
-                      </li>
-                      <li>
-                        <label><h4>Edit business info</h4></label>
-                      </li>
-                    </ul>
+                    <h2>Hours</h2>
+                    <table class="table table-simple hours-table">
+                       <tbody>
+                          <tr>
+                             <th scope="row">Mon</th>
+                             <td>
+                                <span class="nowrap">{business.monday}</span>
+                             </td>
+                             <td class="extra">
+                             </td>
+                          </tr>
+                          <tr>
+                             <th scope="row">Tue</th>
+                             <td>
+                                <span class="nowrap">{business.monday}</span>
+                             </td>
+                             <td class="extra">
+                             </td>
+                          </tr>
+                          <tr>
+                             <th scope="row">Wed</th>
+                             <td>
+                                <span class="nowrap">{business.monday}</span>
+                             </td>
+                             <td class="extra">
+                             </td>
+                          </tr>
+                          <tr>
+                             <th scope="row">Thu</th>
+                             <td>
+                                <span class="nowrap">{business.monday}</span>
+                             </td>
+                             <td class="extra">
+                             </td>
+                          </tr>
+                          <tr>
+                             <th scope="row">Fri</th>
+                             <td>
+                                <span class="nowrap">{business.monday}</span>
+                             </td>
+                             <td class="extra">
+                             </td>
+                          </tr>
+                          <tr>
+                             <th scope="row">Sat</th>
+                             <td>
+                                <span class="nowrap">{business.monday}</span>
+                             </td>
+                             <td class="extra">
+                             </td>
+                          </tr>
+                          <tr>
+                             <th scope="row">Sun</th>
+                             <td>
+                                <span class="nowrap">{business.monday}</span>
+                             </td>
+                             <td class="extra">
+                             </td>
+                          </tr>
+                       </tbody>
+                    </table>
                     <div className="biz-more-info">
                       <ul><h2>More business info</h2>
                         <li>

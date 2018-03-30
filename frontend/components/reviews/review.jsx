@@ -7,7 +7,7 @@ const Review = ({ review, user, avgRating}) => {
       <div className="review-left">
         <div className="review-left-top">
           <img src={ user.img_url }></img>
-          <h4> { user.username }</h4>
+          <p> { user.username }</p>
         </div>
         <div className="review-left-right">
         </div>
