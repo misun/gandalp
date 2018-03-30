@@ -1,8 +1,8 @@
 import React from 'react';
-import { MdStar, MdStarBorder, MdStars,  MdStarOutline, MdStarHalf, MdBuild} from 'react-icons/lib/md';
 import { withRouter, Link } from 'react-router-dom';
 import Review from '../reviews/review';
 import Map from '../map/map';
+import Rating from '../rating/rating';
 
 class BusinessShow extends React.Component {
     componentDidMount(){
@@ -21,15 +21,8 @@ class BusinessShow extends React.Component {
         )) : null;
 
       const reviewsComponent = reviews.map( (review) => (
-        <Review key={review.id} review={review} user={review.user}  />
+        <Review key={review.id} review={review} user={review.user} avgRating={ business.avg_rating } />
       ));
-
-
-      let rating = [];
-
-      for(let i=0; i < business.avg_rating; i++){
-        rating.push(<MdStar key={i} size="20px" color="#ed883b"/>);
-      }
 
       return(
           <div className="biz-content">
@@ -42,7 +35,7 @@ class BusinessShow extends React.Component {
                     <div className="review-rate">
 
                       <div className="review-rate-star">
-                        { rating }
+                        <Rating avgRating={ business.avg_rating } />
                         &nbsp;&nbsp;&nbsp;
                         <h4>{ business.review_cnt } Reviews</h4>
                       </div>
@@ -61,7 +54,6 @@ class BusinessShow extends React.Component {
 
                     <Link
                       to={`/business/${business.id}/reviews/new`} className="write-review-btn" >
-                      <MdStar size={23} color="white" />
                       &nbsp;
                       write a review
                     </Link>

@@ -1,12 +1,7 @@
 import React from 'react';
-import { MdStar, MdStarBorder, MdStars,  MdStarOutline, MdStarHalf} from 'react-icons/lib/md';
+import Rating from '../rating/rating';
 
-const Review = ({ review, user}) => {
-  let rating = [];
-
-  for(let i=0; i < review.rating; i++){
-    rating.push(<MdStar key={i} size="20px" color="#ed883b"/>);
-  }
+const Review = ({ review, user, avgRating}) => {
   return(
     <div className="review">
       <div className="review-left">
@@ -20,7 +15,7 @@ const Review = ({ review, user}) => {
       <div className="review-right">
         <div className="review-content">
           <div className="review-rate-star">
-            {rating}
+            <Rating avgRating={ avgRating } />
             &nbsp;&nbsp;&nbsp;
             <h4>{ review.created_at }</h4>
           </div>

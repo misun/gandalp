@@ -16,3 +16,4 @@ json.photo business.photos.first.image.url
 json.review business.reviews.first
 json.review_cnt business.reviews.count
 json.user_img  business.reviews.first.user.image.url
+json.avg_rating business.reviews.average(:rating).to_i

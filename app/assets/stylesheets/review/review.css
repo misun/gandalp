@@ -124,7 +124,6 @@
 }
 
 #write-review-rating-background{
-  margin-bottom: 30px;
   background-image: url("https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png");
   background-size: 132px 560px;
   background-repeat: no-repeat;
@@ -136,7 +135,6 @@
   background-position: 0 0;
   position: relative;
 }
-
 #write-review-rating{
   display: flex;
   align-items: center;

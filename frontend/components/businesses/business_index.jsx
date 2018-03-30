@@ -16,15 +16,15 @@ class BusinessIndex extends React.Component{
   }
 
   render(){
-    const businesses =  Object.values(this.props.businesses).map( biz => (
-      <div className="biz-index-item" key={biz.id}>
-        <BusinessItemContainer business={ biz } parent={ 'biz-index'} />
-      </div>
-    ));
-
-    // we need to provide a center coordinate for our map, this is SF
-    const mapCenter = { lat: 37.7758, lng: -122.435 };
-
+    const  indices = [];
+    const businesses =  Object.values(this.props.businesses).map( (biz,idx) => {
+      indices.push(idx);
+      return (
+      <div className="biz-index-item" key={ biz.id }>
+        <BusinessItemContainer idx={ idx + 1 } business={ biz } parent={ 'biz-index'} />
+      </div>);
+    }
+  );
 
     return (
       <div className="biz-content">
@@ -39,7 +39,7 @@ class BusinessIndex extends React.Component{
             </div>
 
             <div className="biz-rightbar">
-                <MapIndex center={mapCenter} businesses={this.props.businesses}/>
+                <MapIndex businesses={this.props.businesses}/>
             </div>
 
           </div>

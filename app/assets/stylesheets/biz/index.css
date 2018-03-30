@@ -50,7 +50,7 @@
   justify-content: center;
 }
 .biz-header{
-  height: 143px;
+  width: 100%;
   display: inline-flex;
   text-align: left;
 }
@@ -64,7 +64,7 @@
   width: calc(100% - 520px);
   display: flex;
   align-items: center;
-  justify-content:  center;
+  justify-content: flex-end;
 }
 .biz-sub-content{
   display: inline-flex;

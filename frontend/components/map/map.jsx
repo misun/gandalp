@@ -33,20 +33,13 @@ class Map extends React.Component {
         that.map.setCenter(results[0].geometry.location);
         var marker = new google.maps.Marker({
             map: that.map,
+            animation: google.maps.Animation.DROP,
             position: results[0].geometry.location
         });
       } else {
         //console.log('Geocode was not successful for the following reason: ' + status);
       }
     });
-  }
-
-  toggleBounce() {
-    if (marker.getAnimation() !== null) {
-      marker.setAnimation(null);
-    } else {
-      marker.setAnimation(google.maps.Animation.BOUNCE);
-    }
   }
 
   render() {

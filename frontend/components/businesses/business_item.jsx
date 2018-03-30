@@ -1,18 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MdStar, MdStarBorder, MdStars,  MdStarOutline, MdStarHalf, MdBuild} from 'react-icons/lib/md';
+import Rating from '../rating/rating';
 
 class BusinessItem extends React.Component{
 
   render(){
-    const { business } = this.props;
-
-    let rating = [];
-
-    for(let i=0; i < business.review.rating; i++){
-      rating.push(<MdStar key={i} size="20px" color="#ed883b"/>);
-    }
-
+    const { business, idx } = this.props;
     if (this.props.parent === 'biz-home'){
       return (
         <ul>
@@ -20,6 +13,7 @@ class BusinessItem extends React.Component{
             <img src={ business.photo } />
           </Link></li>
           <li>{ business.name }</li>
+          <li><Rating avgRating={ business.avg_rating } /></li>
           <li>{ business.price_range }</li>
           <li>{ business.category }</li>
           <li>{ business.address }</li>
@@ -35,9 +29,9 @@ class BusinessItem extends React.Component{
               </Link>
             </div>
             <div className="item-middle">
-                <h1>{ business.name }</h1>
+                <h1>{ idx }. { business.name }</h1>
                 <div className="review-rate-star">
-                  { rating }
+                  <Rating avgRating={ business.avg_rating } />
                   &nbsp;&nbsp;&nbsp;
                   <h4>{ business.review_cnt} Reviews</h4>
                 </div>
