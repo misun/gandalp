@@ -37,6 +37,7 @@
 .review-rate-star{
  display: flex;
  align-items: center;
+ justify-content: space-between;
 }
 .biz-header-info{
 

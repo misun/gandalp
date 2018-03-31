@@ -3,12 +3,32 @@ import { withRouter, Link } from 'react-router-dom';
 import Review from '../reviews/review';
 import Map from '../map/map';
 import Rating from '../rating/rating';
+import BusinessInfo from './business_info';
 
 class BusinessShow extends React.Component {
+    constructor(props){
+      super(props);
+    }
     componentDidMount(){
       this.props.fetchBiz(this.props.match.params.businessId);
     }
 
+    ShouldComponentUpdate(nextProps, nextState){
+      debugger
+      nextProps.fetchBiz(nextProps.match.params.businessId);
+    }
+    ComponentDidUpdate(){
+      debugger
+    }
+    ComponentWillUpdate(){
+      debugger
+    }
+    ComponentWillReceiveProps(){
+      debugger
+    }
+    ShouldComponentUpdate(){
+        debugger
+    }
     render(){
       const {business, reviews, currentUser, fetchBiz } = this.props;
 
@@ -21,7 +41,7 @@ class BusinessShow extends React.Component {
         )) : null;
 
       const reviewsComponent = reviews.map( (review) => (
-        <Review key={review.id} review={review} user={review.user} avgRating={ business.avg_rating } />
+        <Review key={review.id} review={review} user={review.user} avgRating={ business.avg_rating } businessId={business.id} />
       ));
 
       return(
@@ -90,79 +110,7 @@ class BusinessShow extends React.Component {
                 </div>
 
                 <div className="biz-rightbar">
-                  <div className="biz-info">
-                    <h2>Hours</h2>
-                    <table class="table table-simple hours-table">
-                       <tbody>
-                          <tr>
-                             <th scope="row">Mon</th>
-                             <td>
-                                <span class="nowrap">{business.monday}</span>
-                             </td>
-                             <td class="extra">
-                             </td>
-                          </tr>
-                          <tr>
-                             <th scope="row">Tue</th>
-                             <td>
-                                <span class="nowrap">{business.monday}</span>
-                             </td>
-                             <td class="extra">
-                             </td>
-                          </tr>
-                          <tr>
-                             <th scope="row">Wed</th>
-                             <td>
-                                <span class="nowrap">{business.monday}</span>
-                             </td>
-                             <td class="extra">
-                             </td>
-                          </tr>
-                          <tr>
-                             <th scope="row">Thu</th>
-                             <td>
-                                <span class="nowrap">{business.monday}</span>
-                             </td>
-                             <td class="extra">
-                             </td>
-                          </tr>
-                          <tr>
-                             <th scope="row">Fri</th>
-                             <td>
-                                <span class="nowrap">{business.monday}</span>
-                             </td>
-                             <td class="extra">
-                             </td>
-                          </tr>
-                          <tr>
-                             <th scope="row">Sat</th>
-                             <td>
-                                <span class="nowrap">{business.monday}</span>
-                             </td>
-                             <td class="extra">
-                             </td>
-                          </tr>
-                          <tr>
-                             <th scope="row">Sun</th>
-                             <td>
-                                <span class="nowrap">{business.monday}</span>
-                             </td>
-                             <td class="extra">
-                             </td>
-                          </tr>
-                       </tbody>
-                    </table>
-                    <div className="biz-more-info">
-                      <ul><h2>More business info</h2>
-                        <li>
-                          <label>Phone : {business.phone}</label>
-                        </li>
-                        <li>
-                          <label>Address : {business.address}</label>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  <BusinessInfo business={business} />
                 </div>
 
               </div>
