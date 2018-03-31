@@ -1,9 +1,11 @@
 .review-idx-thumb {
     width: 30px;
-    height: 30px;
-    background-color: pink;
 }
-
+.review-idx-thumb img {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
 .review-idx-content {
     width: calc(100% - 30px);
     margin: 0 20px 0 20px;
@@ -112,14 +114,13 @@
   border: 1px solid lightgray;
   border-radius: 5px;
   width: 100%;
-  min-height: 400px;
   padding: 20px;
 }
 
 
 .write-review-input>textarea{
   width: 100%;
-  min-height: 350px;
+  min-height: 200px;
   resize: vertical;
   overflow: visible;
   line-height: 1.5em;

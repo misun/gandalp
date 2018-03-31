@@ -3,10 +3,16 @@
     height: 321px;
     background-color: white;
     border-radius: 4px;
-    margin: 20px 0 20px 0;
+    margin: 20px 10px 20px 10px;
     border: 1px solid #e6e6e6;
 }
-
+.biz-item ul{
+  text-align: left;
+}
+.biz-item ul>li:not(:first-child){
+  padding-left: 10px;
+  padding-top: 5px;
+}
 .biz-item img {
     width: 298px;
     height: 180px;
