@@ -12,23 +12,6 @@ class BusinessShow extends React.Component {
     componentDidMount(){
       this.props.fetchBiz(this.props.match.params.businessId);
     }
-
-    ShouldComponentUpdate(nextProps, nextState){
-      debugger
-      nextProps.fetchBiz(nextProps.match.params.businessId);
-    }
-    ComponentDidUpdate(){
-      debugger
-    }
-    ComponentWillUpdate(){
-      debugger
-    }
-    ComponentWillReceiveProps(){
-      debugger
-    }
-    ShouldComponentUpdate(){
-        debugger
-    }
     render(){
       const {business, reviews, currentUser, fetchBiz } = this.props;
 
@@ -39,7 +22,6 @@ class BusinessShow extends React.Component {
               </a>
             </div>
         )) : null;
-
       const reviewsComponent = reviews.map( (review) => (
         <Review key={review.id} review={review} user={review.user} avgRating={ business.avg_rating } businessId={business.id} />
       ));

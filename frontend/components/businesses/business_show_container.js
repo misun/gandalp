@@ -20,8 +20,8 @@ const defaultbiz = {
 };
 
 const msp = (state, {match, location}) => {
-  let business = state.entities.businesses[match.params.businessId] || defaultbiz ;
-  const reviews = business.review_ids ? business.review_ids.map( id => ( state.entities.reviews[id] )) : [];
+  let business = state.entities.businesses[match.params.businessId] || defaultbiz;
+  const reviews = state.entities.reviews ? Object.values(state.entities.reviews) : [];
   let currentUser = state.session.currentUser;
 
   const search = location.search;
@@ -29,9 +29,6 @@ const msp = (state, {match, location}) => {
   const bizName = params.get('bizName');
   const loc = params.get('loc');
 
-  // TODO:  get lat lng from google geocoder. 
-  // business.lat =
-  // business.lng =
   return {
     business,
     reviews,

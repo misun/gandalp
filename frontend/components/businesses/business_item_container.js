@@ -18,8 +18,7 @@ const msp = (state, ownProps) => {
     address: "",
     review_ids: [],
     review: {},
-    photos: [],
-    photo: ""
+    photos: []
   };
 
   const business = ownProps.business || defaultbiz;
