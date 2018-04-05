@@ -41,7 +41,7 @@ Some anticipated updates are:
 - [x] Google maps for Business index page
 - [ ] Photo uploading for user profile
 - [x] Photo uploading for creating review
-- [ ] Review delete
+- [x] Review delete
 
 ### Screenshot
 
