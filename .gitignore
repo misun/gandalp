@@ -33,3 +33,6 @@ npm-debug.log
 
 # Ignore application configuration
 /config/application.yml
+
+# Ignore test file
+/frontend/components/search/search_main0.jsx

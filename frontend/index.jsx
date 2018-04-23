@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import {fetchBiz, fetchAllBiz} from './actions/business_actions';
-import {createReview} from './actions/review_actions';
-import MarkerManager from  './util/marker_manager';
+import * as user from './util/user_api_util';
 
 document.addEventListener('DOMContentLoaded', ()=>{
   const root = document.getElementById('root');
@@ -22,6 +21,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   //test logic
   window.dispatch = store.dispatch;
   window.store = store;
+  window.user = user;
 
   ReactDOM.render(<Root store={ store }/>, root);
 });

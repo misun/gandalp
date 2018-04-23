@@ -23,11 +23,13 @@ class Greeting extends React.Component {
 
     if ( user ){
       greet = (
-        <div>
-          <h1> welcome {this.props.currentUser.username}
-          </h1>
-          <button  onClick={this.handleLogout.bind(this)}>Log Out</button>
-          <br/>
+        <div className='header-profile'>
+          <h1> welcome {this.props.currentUser.username} </h1>
+          <button onClick={this.handleLogout.bind(this)}>Log Out</button>
+
+          {/* future feature-profile <Link to={`/profile/${this.props.currentUser.id}`} >*/}
+            <img className='header-thumb' src={this.props.currentUser.img_url} />
+          {/*</Link>*/}
         </div>
       );
     }else {

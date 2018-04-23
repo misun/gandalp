@@ -10,6 +10,7 @@ import Home from './layouts/home';
 import ReviewCreateContainer from './reviews/review_create_container';
 import Footer from './layouts/footer';
 import Header from './layouts/header';
+import ProfileContainer from './profile/profile_container';
 
 const App = () => {
   return (
@@ -39,6 +40,11 @@ const App = () => {
             exact
             path='/business/:businessId/reviews/new'
             component={ ReviewCreateContainer } />
+
+        <Route
+            exact
+            path='/profile/:userId'
+            component={ ProfileContainer } />
 
         <Route
           exact

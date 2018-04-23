@@ -15,16 +15,17 @@ class BusinessIndex extends React.Component{
     }
   }
 
+
   render(){
     const  indices = [];
     const businesses =  Object.values(this.props.businesses).map( (biz,idx) => {
-      indices.push(idx);
-      return (
-      <div className="biz-index-item" key={ biz.id }>
-        <BusinessItemContainer idx={ idx + 1 } business={ biz } parent={ 'biz-index'} />
-      </div>);
-    }
-  );
+        indices.push(idx);
+        return (
+        <div className="biz-index-item" key={ biz.id }>
+          <BusinessItemContainer idx={ idx + 1 } business={ biz } parent={ 'biz-index'} />
+        </div>);
+      }
+    );
 
     return (
       <div className="biz-content">

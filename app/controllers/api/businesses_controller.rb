@@ -1,6 +1,6 @@
 class Api::BusinessesController < ApplicationController
 
-  before_action :sanitize_page_params, only: [:create]
+  before_action :sanitize_biz_params, only: [:create]
 
   def create
     @business = Business.new( business_params );
@@ -75,15 +75,11 @@ class Api::BusinessesController < ApplicationController
     params.require(:business).permit(:name, :price_range, :category, :address, :phone, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday, :owner_id)
   end
 
-  def bounds
-    params[:bounds]
-  end
-
   def keywords
-    params[:keywords]
+    params.require(:keywords).permit(:bizName, :loc) if params[:keywords].present?
   end
 
-  def sanitize_page_params
+  def sanitize_biz_params
     params[:business][:owner_id] = params[:business][:owner_id].to_i
   end
 end
