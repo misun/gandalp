@@ -2,13 +2,16 @@ import SearchMain from './search_main';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { fetchFilteredBiz, fetchAllBiz } from '../../actions/business_actions';
-import { selectBizLocs } from '../../reducers/selector';
+import { selectBizLocs, selectBizNames } from '../../reducers/selector';
 
 const msp = (state, ownProps) => {
   const allLocs = selectBizLocs( state.entities.businesses );
 
+  const allBizes = selectBizNames( state.entities.businesses );
+
   return {
     allLocs,
+    allBizes,
     errors: state.errors,
     formType: 'search'
   };

@@ -18,8 +18,13 @@ export const asArray = ({ businesses }) => (
   Object.keys(businesses).map(key => businesses[key])
 );
 
-export const selectBizNames = () => {
+export const selectBizNames = ( businesses ) => {
+  let bizes = [];
+  Object.values(businesses).forEach( biz => {
+     bizes =bizes.concat(biz.name.split(', '));
+  });
 
+  return bizes;
 };
 
 export const selectBizLocs = ( businesses ) => {
@@ -27,6 +32,6 @@ export const selectBizLocs = ( businesses ) => {
   Object.values(businesses).forEach( biz => {
      locs =locs.concat(biz.address.split(', '));
   });
-  
+
   return locs;
 };
