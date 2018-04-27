@@ -9,13 +9,12 @@ class SearchMain extends React.Component {
       bizName: '',
       loc: '',
       allLocs: [],
-      allBizes: [],
-      locSuggestClass: 'loc-suggest',
-      bizSuggestClass: 'biz-suggest'
+      allBizes: []
     }
     this.updateInput = this.updateInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    this.clickBizName = this.clickBizName.bind(this);
+    this.clickLoc = this.clickLoc.bind(this);
   }
 
   componentWillReceiveProps(nextProps){
@@ -33,12 +32,20 @@ class SearchMain extends React.Component {
     };
   }
 
-  handleClick(e){
+  clickBizName(e){
     e.preventDefault();
     this.setState(
       {
-        loc: e.target.value,
-        locSuggestClass: 'loc-suggest'
+        bizName: e.target.value
+       }
+    )
+  }
+
+  clickLoc(e){
+    e.preventDefault();
+    this.setState(
+      {
+        loc: e.target.value
        }
     )
   }
@@ -107,7 +114,7 @@ class SearchMain extends React.Component {
           <div></div>
           <div>
             <AutoSuggest
-              onClick={this.handleClick}
+              onClick={this.clickBizName}
               allSuggestions={this.state.allBizes}
               value={this.state.bizName}
               />
@@ -115,7 +122,7 @@ class SearchMain extends React.Component {
           <div></div>
           <div>
             <AutoSuggest
-              onClick={this.handleClick}
+              onClick={this.clickLoc}
               allSuggestions={this.state.allLocs}
               value={this.state.loc}
               />

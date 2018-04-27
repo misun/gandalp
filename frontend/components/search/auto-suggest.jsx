@@ -13,32 +13,32 @@ class AutoSuggest extends React.Component{
     }
 
     this.autoSuggest = this.autoSuggest.bind(this);
-    // this.handleClick = this.handleClick.bind(this);
   }
 
   autoSuggest(){
-    console.log(this.state.value);
-    console.log(this.state.autoSuggestions);
-    console.log(this.state.allSuggestions);
+    const value = this.state.value.toLowerCase();
 
-    if (this.state.value){
+    if (value){
       this.setState({
-        autoSuggestions: this.state.allSuggestions.filter( e => e.includes(this.state.value)),
-        divStyle: 'loc-suggest show',
+        autoSuggestions: this.state.allSuggestions.filter( e => e.toLowerCase().includes(value)),
+        divStyle: 'loc-suggest show'
       });
-    }else if( this.state.value === this.state.autoSuggestions[0]) {
+    }else {
       this.setState({
-        autoSuggestions: []
+        autoSuggestions: [],
+        divStyle: 'loc-suggest'
       });
     }
   }
 
   componentWillReceiveProps(nextProps){
-    this.setState({
-      value: nextProps.value,
-      allSuggestions: nextProps.allSuggestions
-    }, this.autoSuggest);
-
+    if ( this.props.value !== nextProps.value ){
+      this.setState({
+        value: nextProps.value,
+        allSuggestions: nextProps.allSuggestions,
+        divStyle: nextProps.divStyle
+      }, this.autoSuggest);
+    }
   }
 
   render(){
@@ -48,7 +48,7 @@ class AutoSuggest extends React.Component{
           return (
             <button
               key={ idx }
-              onClick={ this.props.onClick }
+              onClick={this.props.onClick}
               value={ loc }
               style={{padding: "5px 0"}}>
               { loc }
