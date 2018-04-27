@@ -18,7 +18,7 @@ class AutoSuggest extends React.Component{
   autoSuggest(){
     const value = this.state.value.toLowerCase();
 
-    if (value){
+    if (value && value.length < 5 ){
       this.setState({
         autoSuggestions: this.state.allSuggestions.filter( e => e.toLowerCase().includes(value)),
         divStyle: 'loc-suggest show'
@@ -30,15 +30,12 @@ class AutoSuggest extends React.Component{
       });
     }
   }
-
   componentWillReceiveProps(nextProps){
-    if ( this.props.value !== nextProps.value ){
-      this.setState({
-        value: nextProps.value,
-        allSuggestions: nextProps.allSuggestions,
-        divStyle: nextProps.divStyle
-      }, this.autoSuggest);
-    }
+    this.setState({
+      value: nextProps.value,
+      allSuggestions: nextProps.allSuggestions,
+      divStyle: nextProps.divStyle
+    }, this.autoSuggest);
   }
 
   render(){
