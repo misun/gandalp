@@ -64,7 +64,7 @@ class SearchMain extends React.Component {
    }else {
      this.props.fetchAllBiz().then(
        () => {
-         this.props.history.push(`/business`);
+         this.props.history.push(`/business`); 
        }
      );
    }
