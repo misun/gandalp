@@ -2,7 +2,7 @@
 
 ### Background
 
-Afull-stack, single-page project showing local businesses inspired by Yelp
+A full-stack, single-page project showing local businesses inspired by Yelp
 
 [Live Demo](http://aa-selp.herokuapp.com/#/)
 
