@@ -22,22 +22,16 @@ export const deletePhoto = ( photoId ) => {
 };
 
 export const fetchBizAllPhotos = ( bizId ) => {
-  return $.ajax({
-    url: `/api/businesses/${bizId}/photos`,
-    method: 'GET'
-  });
+  return fetch(`/api/businesses/${bizId}/photos`)
+  .then( res => res.json() );
 };
 
 export const fetchUserAllPhotos = ( userId ) => {
-  return $.ajax({
-    url: `/api/users/${userId}/photos`,
-    method: 'GET'
-  });
+  return fetch(`/api/users/${userId}/photos`)
+  .then( res => res.json() );
 };
 
 export const fetchBizPhoto = ( photoId ) => {
-  return $.ajax({
-    url: `/api/photos/${photoId}`,
-    method: 'GET'
-  });
+  return fetch(`/api/photos/${photoId}`)
+  .then( res => res.json() );
 };
