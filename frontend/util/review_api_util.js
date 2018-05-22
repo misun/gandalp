@@ -1,7 +1,7 @@
 export const createReview = (data) => {
-
+  debugger
   return $.ajax({
-    url: `/api/businesses/${data.business_id}/reviews`,
+    url: `/api/businesses/${data.get("review[business_id]")}/reviews`,
     method: 'POST',
     dataType: 'json',
     contentType: false,

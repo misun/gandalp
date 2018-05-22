@@ -8,12 +8,11 @@ export const createBiz = ( business ) =>{
 };
 
 export const fetchAllBiz = () => {
-  return $.ajax({
-    url: '/api/businesses',
+  return fetch('/api/businesses', {
     method: 'GET'
-  });
-};
-
+  })
+  .then( response => response.json() );
+}
 export const fetchFilteredBiz = ( keywords ) => {
   return $.ajax({
     url: '/api/businesses',
@@ -23,10 +22,10 @@ export const fetchFilteredBiz = ( keywords ) => {
 };
 
 export const fetchBiz = ( businessId ) => {
-  return $.ajax({
-    url: `/api/businesses/${businessId}`,
+  return fetch( `/api/businesses/${ businessId }`, {
     method: 'GET'
-  });
+  })
+  .then( response => response.json() );
 };
 
 export const updateBiz = ( business ) => {
