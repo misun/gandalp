@@ -31,40 +31,30 @@ class BusinessShow extends React.Component {
 
             <section className="biz-content-top">
               <div className="biz-top-main">
+
                 <div className="biz-header">
-                  <div className="biz-header-left">
-                    <div><h1>{ business.name }</h1></div>
-                    <div className="review-rate">
+                  <div className="bh-1"><h1>{ business.name }</h1></div>
+                  <div className="bh-2">
 
-                      <div className="review-rate-star">
-                        <Rating avgRating={ business.avg_rating } />
-                        &nbsp;&nbsp;&nbsp;
-                        <h4>{ business.review_cnt } Reviews</h4>
-                      </div>
-
-                      <div className="biz-header-info">
-                        <span className="price-range">$$ {business.price_range}</span>
-                          &nbsp;&nbsp;&nbsp;
-                        <span className="category">
-                          { business.category }</span>
-                      </div>
-
-                    </div>
                   </div>
+                  <div className="bh-3">
+                    <Rating avgRating={ business.avg_rating } />
+                    <h4>{ business.review_cnt } Reviews</h4>
 
-                  <div className="biz-header-right">
-
+                  </div>
+                  <div className="bh-4">
                     <Link
                       to={`/business/${business.id}/reviews/new`} className="write-review-btn" >
                       &nbsp;
-                      write a review
+                      Write a Review
                     </Link>
-
-                    {/*<span className="btn-group clearfix">
-                      <a href="#" className="ybtn">Add Photo</a>
-                      <a href="#" className="ybtn">Share</a>
-                      <a href="#" className="ybtn">Bookmark</a>
-                    </span> */}
+                  </div>
+                  <div className="bh-5">
+                    <span className="category">
+                      { business.category }
+                    </span>
+                  </div>
+                  <div className="bh-6">
                   </div>
                 </div>
 
@@ -76,6 +66,7 @@ class BusinessShow extends React.Component {
                       singleBiz={true}
                       fetchBiz={fetchBiz}
                     />
+                  {business.address}
                   </div>
                   <div className="show-case">
                     { gallery }

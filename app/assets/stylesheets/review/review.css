@@ -38,59 +38,34 @@
     text-align: right;
 }
 
-.review{
+/* .review{
   display: flex;
   border-top: 1px solid #ccc;
-}
-.review-right{
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-}
+} */
 
-
-.review-left{
-  width: 40%;
+.review{
+  display: grid;
+  grid-template-columns: 1fr 2fr 4.5fr;
+  padding: 15px 0;
+  border-bottom: 1px solid lightgray;
 }
-
-.review-left-top {
-    display: flex;
-    padding: 10px 40px 0px 10px;
+.rvw-1 img{
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  margin-right: 20px;
+  border-radius: 5px;
 }
-
-.review-left-top img {
-    width: 60px;
-    height: 60px;
-    border-radius: 5px;
-    margin-right: 20px;
-    border-radius: 5px;
+.rvw-3 p{
+    font-size: 14px;
+    line-height: 32px;
+    width: 100%;
+    padding-top: 20px;
 }
-.review-left-top p{
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.review-left-right{
-
-}
-
-.review-footer{
-
-}
-.review-content{padding: 10px;/* overflow: hidden; */}
-
-.review-content p{
-  /* text-overflow: ellipsis; */
-  font-size: 14px;
-  /* overflow: hidden; */
-  line-height: 32px;
-  width: 100%;
-  /* letter-spacing: 0.5px; */
-}
-.review-body{
-  width: 100px, auto;
-  height: 100px,auto;
-  background-color: pink;
+.review-rate-star{
+ display: grid;
+ grid-template-columns: 2fr 4fr 1fr;
+ justify-content: baseline;
 }
 .write-review{
   width: 30%;
@@ -132,7 +107,7 @@
   font-size: 13px;
   font-family: 'Rubik';
 }
-
+/*
 #write-review-rating-background{
   background-image: url("https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png");
   background-size: 132px 560px;
@@ -141,6 +116,18 @@
   overflow: hidden;
   height: 0;
   width: 132px;
+  padding-top: 24px;
+  background-position: 0 0;
+  position: relative;
+} */
+#write-review-rating-background{
+  background-image: url("https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png");
+  background-size: 102px 560px;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  overflow: hidden;
+  height: 0;
+  width: 102px;
   padding-top: 24px;
   background-position: 0 0;
   position: relative;

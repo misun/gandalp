@@ -28,31 +28,21 @@ class Review extends React.Component{
     const { review, user, avgRating, businessId ,deleteReview} = this.props;
     return(
       <div className="review">
-        <div className="review-left">
-          <div className="review-left-top">
-            <img src={ user.img_url }></img>
-            <p> { user.username }</p>
+        <div className="rvw-1"><img src={ user.img_url }></img></div>
+        <div className="rvw-2"><p> { user.username }</p></div>
+        <div className="rvw-3">
+          <div className="review-rate-star">
+            <Rating avgRating={ avgRating } />
+            { review.created_at }
+            <input type="button"
+              value="delete"
+              onClick={()=> {
+                deleteReview(review.id);
+              }} />
           </div>
-          <div className="review-left-right">
-          </div>
-        </div>
-        <div className="review-right">
-          <div className="review-content">
-            <div className="review-rate-star">
-              <Rating avgRating={ avgRating } />
-              <h4>{ review.created_at }</h4>
-              <input type="button"
-                value="delete"
-                onClick={()=> {
-                  deleteReview(review.id);
-                }} />
-            </div>
 
-            <p>{review.body}</p>
-            { review.img_url ? <img className="img-review" src={review.img_url} /> : "" }
-          </div>
-          <div className="review-footer">
-          </div>
+          <p>{review.body}</p>
+          { review.img_url ? <img className="img-review" src={review.img_url} /> : "" }
         </div>
       </div>
     );
