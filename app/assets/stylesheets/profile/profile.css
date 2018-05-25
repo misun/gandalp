@@ -1,73 +1,167 @@
-.profile{
-  width: 960px;
-  height: 800px; /* temp data */
-  margin: 0 auto;
+.profile {
+  width: 100%;
+  height: 800px;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 3fr;
 }
-.profile-hd{
-  height: 196px;
-  background: aliceblue;
-  display: flex;
+
+header.pf-hd {
+  background: #f5f5f5;
+  /* height: 196px; */
+  display: grid;
+  grid-template-columns: 1fr 2fr 4fr 2fr 1fr;
 }
 
-.profile-hd-thumb{
+.pf-hd-1 {}
+
+.pf-hd-2 {}
+
+.pf-hd-3 {}
+
+.pf-body {
+  display: grid;
+  grid-template-columns: 1fr 2fr 4fr 2fr 1fr;
+}
+
+header.pf-header {
+  background: #f5f5f5;
+  height: 196px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.profile-hd-thumb {
   background-color: blue;
   width: 217px;
 }
-.profile-hd-sec{
+
+.profile-hd-sec {
   background-color: pink;
   width: calc(100% - 464px);
 }
-.profile-hd-nav{
+
+.profile-hd-nav {
   width: 247px;
   background-color: aliceblue;
 }
-.profile-section{
+
+.profile-section {
   display: flex;
   height: calc(100% - 196px);
 }
-.profile-nav{
+
+.profile-nav {
   background-color: skyblue;
   width: 217.5px;
-
 }
-.profile-article{
+
+.profile-article {
   background-color: red;
   width: calc(100% - 464px);
 }
-.profile-aside{
+
+.profile-aside {
   width: 247px;
   background-color: dimgrey;
 }
 
-.pf-fr2{
+.pf-fr2 {}
 
-}
-.pf-fr2 li{
+.pf-fr2 li {
   float: left;
   display: block;
   color: white;
   text-align: center;
   padding: 16px;
 }
+
 .pf-fr3 {
   font-size: 16px;
   display: flex;
   align-items: center;
 }
+
 .pf-fr3 li {
   display: flex;
   align-items: center;
   word-spacing: 0.3rem;
 }
-.pf-fr3 li a{
+
+.pf-fr3 li a {
   padding-left: 10px;
   color: #0073bb;
   text-decoration: none;
 }
-.pf-fr5{
+
+.pf-fr5 {
+  /* display: grid; */
+  /* grid-template-rows: 1fr 3fr; */
+}
+
+.profile-hd-thumb {
+  background-color: blue;
+  width: 217px;
+}
+
+.profile-hd-sec {
+  background-color: pink;
+  width: calc(100% - 464px);
+}
+
+.profile-hd-nav {
+  width: 247px;
+  background-color: aliceblue;
+}
+
+.profile-section {
+  display: flex;
+  height: calc(100% - 196px);
+}
+
+.profile-nav {
+  background-color: skyblue;
+  width: 217.5px;
+}
+
+.profile-article {
+  background-color: red;
+  width: calc(100% - 464px);
+}
+
+.profile-aside {
+  width: 247px;
+  background-color: dimgrey;
+}
+
+.pf-fr2 {}
+
+.pf-fr2 li {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+
+.pf-fr3 {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.pf-fr3 li {
+  display: flex;
+  align-items: center;
+  word-spacing: 0.3rem;
+}
+
+.pf-fr3 li a {
+  padding-left: 10px;
+  color: #0073bb;
+  text-decoration: none;
+}
+
+.pf-fr5 {
   /* display: grid; */
   /* grid-template-rows: 1fr 3fr; */
 }
