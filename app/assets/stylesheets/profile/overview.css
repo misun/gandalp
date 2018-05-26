@@ -1,0 +1,13 @@
+.overview{
+  margin-right: 20px;
+}
+.overview h2 {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 21px;
+  line-height: 1.28571em;
+  color: #d32323
+}
+.overview article{
+  border-top: 1px solid #e6e6e6;
+}
