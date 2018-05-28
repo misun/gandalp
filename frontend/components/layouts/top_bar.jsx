@@ -9,9 +9,7 @@ const TopBar = () => (
       <div className="main-logo">
         <div className="logo-img" />
       </div>
-
       <SearchMainContainer />
-
     </div>
   </div>
 );

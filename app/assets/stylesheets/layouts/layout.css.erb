@@ -1,28 +1,20 @@
-
-/* PHASE 3: Layout */
-
-
 .content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
   background: #fff;
-  /* width: 900px; */
   border-bottom: 1px solid #ccc;
   border-top: 0;
 }
 
 .content-topbar {
-  /* width: 200px; */
   min-height: 200px;
   padding: 20px;
   padding-right: 19px;
-  /* border-right: 1px solid #ccc; */
 }
 
 .content-bottombar {
-  /* width: 620px; */
   margin-top: 50px;
   min-height: 200px;
   padding: 20px;
@@ -30,28 +22,25 @@
   align-items: flex-start;
 }
 
-.content-leftbar{
+.content-leftbar {
   max-width: 630px;
   min-height: 200px;
   padding: 20px;
   padding-right: 19px;
-  /* border-right: 1px solid #ccc; */
 }
-.content-rightbar{
+
+.content-rightbar {
   width: 320px;
-  /* margin-top: 50px; */
   min-height: 200px;
   padding: 20px;
   display: flex;
   align-items: flex-start;
 }
 
-.content-bottombar > .session-img{
+.content-bottombar>.session-img {
   width: 382px;
   height: 342px;
   border-radius: 50%;
   background-image: url('<%= asset_path("session.jpeg") %>');
-  /* background: url('/assets/gandalp_logo.png') no-repeat center; */
-  /* background-size: cover; */
   background-size: 400px;
 }

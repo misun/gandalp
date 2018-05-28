@@ -81,8 +81,6 @@
   grid-column: 3 / 6;
 }
 
-}
-
 .biz-item-bottom {
   height: calc( 100% - 90px);
   display: flex;
