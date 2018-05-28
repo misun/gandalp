@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class Greeting extends React.Component {
 
@@ -24,7 +24,6 @@ class Greeting extends React.Component {
     if ( user ){
       greet = (
         <div className='header-profile'>
-          <h1> welcome {this.props.currentUser.username} </h1>
           <button onClick={this.handleLogout.bind(this)}>Log Out</button>
 
           {/* future feature <Link to={`/profile/${this.props.currentUser.id}`} >*/}
@@ -32,28 +31,26 @@ class Greeting extends React.Component {
           {/*</Link>*/}
         </div>
       );
-    }else {
+    }else if ( this.props.location.pathname === '/' ) {
       greet = (
-        <ul className="header-list">
-          <li>
-            <a href='#' onClick={this.loginGuest.bind(this)}>Guest</a>
-          </li>
-          <li>
-            <Link to={'/login'}>Log In</Link>
-          </li>
-          <li>
-            <Link to={'/signup'}>Sign Up</Link>
-          </li>
-        </ul>
+        <React.Fragment>
+        <a href='#' onClick={this.loginGuest.bind(this)}>Guest</a>
+        <Link to={'/login'}>Log In</Link>
+        <Link to={'/signup'} className="signup">Sign Up</Link>
+        </React.Fragment>
+      );
+    }else{
+      greet = (
+        <Link to={'/signup'} className="signup">Sign Up</Link>
       );
     }
 
     return (
-      <div className="header-nav-right">
+      <React.Fragment>
         { greet }
-      </div>
+      </React.Fragment>
     );
   }
 };
 
-export default Greeting;
+export default withRouter(Greeting);
