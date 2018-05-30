@@ -42,6 +42,7 @@ Some anticipated updates are:
 - [ ] Photo uploading for user profile
 - [x] Photo uploading for creating review
 - [x] Review delete
+- [x] Navigation Search Bar
 
 ### Screenshot
 
